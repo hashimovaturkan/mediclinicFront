@@ -1,0 +1,101 @@
+.menu{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    &__list{
+        display: flex;
+        position: relative;
+    }
+    &__list-item{
+        position: relative;
+        left: -2rem;
+    }
+    &__list-link{
+        display: inline-block;
+        padding: 1rem 1.6rem;
+        color:rgba($black-v2, 0.9);
+        position: relative;
+        &:hover{
+            color:rgba($black-v2, 0.9);
+        }
+        &::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        &:hover + div.menu__dropdown{
+            opacity: 1;
+            visibility: visible;
+            // animation-name: menuItemHover;
+            // animation-duration: 1s;
+            // animation-timing-function: ease-in-out;
+        }
+        // &:hover .menu__list-elem{
+        //     opacity: 1;
+        // }
+        
+    }
+    &__dropdown{
+        opacity: 0;
+        z-index: 120;
+        background-color: $white;
+        visibility: hidden;
+        box-sizing: border-box;
+        position: absolute;
+        padding: 2.7rem;
+        padding-right: 10rem;
+        left: -3rem;
+        box-shadow: 0 3px 5px -2px rgba(0, 0, 0 , 0.3);
+        transition: 0.4s all ease-in-out;
+        //background-color: red;
+        &:hover{
+            opacity: 1;
+            visibility: visible;
+        }
+        border-top: 1px solid $blue-light;
+    }
+    &__dropdown-list{
+        padding: 0 1.5rem;
+    }
+    &__dropdown-link{
+        display: inline-block;
+        white-space: nowrap;
+        padding: 0.3rem;
+        color:rgba($black-v2, 0.9);
+        &:hover{
+            color:$blue-light;
+        }
+        &:hover::before{
+            transform: rotateY(0deg);
+            padding-right: 15px;
+        }
+        &:active::before{
+            transform: rotateY(0deg);
+            padding-right: 15px;
+        }
+        &::before{
+            display: inline-block;
+            transform: rotateY(90deg);
+            content: "\f067";
+            font-family: FontAwesome,serif;
+            color: $blue-light;
+            font-size: 1.3rem;
+            transition: 0.3s all ease-in-out;
+        }
+    }
+    &__list-elem{
+        border-bottom: 0.4rem solid $blue-light;
+        position: absolute;
+        display: inline-block;
+        width: 41.75px;
+        left: -4.5px;
+        bottom: 0;
+        opacity: 1;
+        transition: 0.5s all ease-in-out;
+        
+    }
+}

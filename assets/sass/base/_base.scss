@@ -1,0 +1,20 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: $black-v2;
+    line-height: 2.8rem;
+    font-weight: 400;
+    background-color: $white;
+    overflow-x: hidden!important;
+    -webkit-font-smoothing: antialiased;
+}
+::selection {
+    background: $blue-light;
+    color: $white;
+}
