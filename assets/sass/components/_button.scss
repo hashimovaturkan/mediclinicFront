@@ -9,6 +9,16 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    &--black{
+      font-size: 1.3rem !important;
+      &::after{
+        background-color: rgb(34, 34, 34) !important;
+      }
+      &::before{
+        background-color: darken(rgb(34, 34, 34), 15%) !important;
+      }
+      
+    }
     &--bigger{
         font-size: 1.5rem;
         padding: 1.2rem 2rem;

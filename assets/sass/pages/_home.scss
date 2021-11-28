@@ -2,4 +2,100 @@
     &__images{
         position: relative;
     }
+    &__over-img{
+        position: absolute;
+        &--1{
+            left: -10%;
+            top: 20%;
+            width: 35rem;
+            height: 40rem;
+        }
+        &--2{
+            right: 0%;
+            bottom: 0%;
+            width: 25rem;
+            height: 25rem;
+        }
+
+    }
+    &__content-text{
+        color:rgba($black-dark-mode-v2, 0.8%);
+        &--over{
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+    &__signature{
+        margin-top: 3rem;
+    }
+    
+}
+
+
+.our-services{
+    position: relative;
+    background-image: url('../images/pattern-3.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    //opacity: .23;
+}
+
+
+.appointment{
+    position: relative;
+    background-color: $blue-v2;
+    &::before{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        content: '';
+        height: 11rem;
+        background-color: $white;
+    }
+    &::after{
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        height: 11rem;
+        content: '';
+        height: 11rem;
+        background-color: $white;
+    }
+    &__make-wrapper{
+        @include flexbox(flex-start);
+    }
+    &__image{
+        position: relative;
+        z-index: 2;
+    }
+    &__subtitle{
+        display: inline-block;
+        color:$white;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    &__title{
+        line-height: 1.2em;
+        color: $white;
+        font-weight: 700;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+    &__number{
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        color: $white;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+    &__phone{
+        font-size: 3rem;
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+.fact{
+    
 }

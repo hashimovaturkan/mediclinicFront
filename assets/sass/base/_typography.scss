@@ -1,0 +1,21 @@
+.subtitle{
+    margin-top: 4rem;
+    font-size: 2rem;
+    color: rgba($black-dark-mode-v2, 0.8%);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    &--center{
+        text-align: center;
+    }
+}
+.title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    &--center{
+        text-align: center;
+    }
+}
+.text-center{
+    text-align: center;
+}

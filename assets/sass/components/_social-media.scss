@@ -1,0 +1,33 @@
+.social-btn{
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0.15rem solid black;
+    float: left;
+    transition: all 0.5s ease;
+    &:not(:last-child){
+        margin-right: 1.5rem;
+    }
+    & a{
+        color: #D8E2DC;
+        display: inline-block;
+        //margin-top: 20px;
+        transition: all 0.5s ease;
+    }
+    &--instagram:hover{
+        @include social-media(#bc2a8d);
+    }
+    &--mail:hover{
+        @include social-media(#3b5998);
+    }
+    &--tel:hover{
+        @include social-media(#4dc247);
+    }
+    &--linkedin:hover{
+        @include social-media(#dd4b39);
+    }
+
+}
