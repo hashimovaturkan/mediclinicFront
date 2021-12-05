@@ -11,6 +11,7 @@
     z-index: 1;
     &--black{
       font-size: 1.3rem !important;
+      white-space: nowrap;
       &::after{
         background-color: rgb(34, 34, 34) !important;
       }

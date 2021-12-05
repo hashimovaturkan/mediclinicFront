@@ -85,3 +85,49 @@ function myFunction() {
     navbar.classList.remove("fixed");
   }
 }
+
+
+//timetable
+const timetableDatas =  document.querySelectorAll(".timetable__data");
+timetableDatas.forEach(function(item){
+  item.addEventListener("mouseover",function(e){
+    const next = item.querySelector(".timetable__dropdown");
+    next.classList.remove("d-none");
+  })
+  item.addEventListener("mouseout",function(e){
+    const next = item.querySelector(".timetable__dropdown");
+    next.classList.add("d-none");
+  })
+})
+
+
+const timetableLink = document.querySelectorAll(".selector__link");
+const timetableTarget = document.querySelector(".selector__target span");
+const timetableDropdown = document.querySelector(".selector__dropdown");
+
+timetableTarget.addEventListener("click",function(e){
+  timetableDropdown.classList.toggle("d-none");
+  e.preventDefault();
+  e.stopPropagation();
+})
+
+document.addEventListener("click",function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  timetableDropdown.classList.add("d-none");
+})
+
+timetableLink.forEach(function(item){
+  item.addEventListener("click",function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    timetableTarget.textContent = item.textContent;
+    timetableDropdown.classList.add("d-none");
+  })
+  item.addEventListener("mouseout",function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    const next = item.querySelector(".timetable__dropdown");
+    next.classList.add("d-none");
+  })
+})

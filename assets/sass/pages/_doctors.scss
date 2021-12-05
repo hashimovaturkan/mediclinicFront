@@ -1,0 +1,89 @@
+.main{
+    background-image: url('../images/team-parallax-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 30rem;
+    &__img{
+        height: 100%
+    }
+    &__wrapper{
+        height: 100%;
+        @include flexbox(center);
+        flex-direction: column;
+    }
+    &__title{
+        font-size: 5rem;
+        line-height: 1.2em;
+        font-weight: 500;
+        color: $white;
+        margin-bottom: 2rem;
+    }
+    &__subtitle{
+        color: $white;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+}
+
+.doctors{
+    padding: 8rem 0;
+    &__title{
+        font-size: 5rem;
+        line-height: 1.2em;
+        font-weight: 500;
+        font-family: Poppins,sans-serif;
+        color: $black-v2;
+        text-align: center;
+    }
+    &__subtitle{
+        padding: 0 12%;
+        line-height: 1.8em;
+        font-size: 1.9rem;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.find-doctor{
+    background-color: #eaeaea;
+    padding: 8rem 0;
+    &__title{
+        font-size: 24px;
+        line-height: 1.58em;
+        font-weight: 500;
+        margin: 20px 0;
+        color: #333;
+        font-weight: 600;
+        text-align: center;
+    }
+    &__input{
+        width: 30%;
+        //margin: 0 0 14px;
+        padding: 11px 17px;
+        font-family: inherit;
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 300;
+        color: #afafaf;
+        //background-color: #f4f4f4;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        outline: 0;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        margin-right: 4rem;
+        &::placeholder{
+            color: #727171
+        }
+    }
+    &__text{
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 2rem
+    }
+    &__box{
+        @include flexbox(center);
+        margin: 0 13rem;
+    }
+}
