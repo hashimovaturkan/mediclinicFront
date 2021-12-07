@@ -1,0 +1,34 @@
+.department-cart{
+    padding: 2rem;
+    background-color: $white;
+    box-shadow: 0 0 20px rgba(0, 0, 0 , 0.1%);
+    &:hover .department-cart__img{
+        animation:  scaleImg 1s;
+    }
+    &__img{
+        background-image: url('../images/departments-title-img.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+    .icon{
+        color:rgb(19, 112, 181);
+    }
+    &__body{
+        padding: 3rem 0;
+        padding-bottom: 5rem;
+    }
+    &__title{
+        margin-bottom: 2rem;
+    }
+    &__text{
+        font-size: 15px;
+        line-height: 26px;
+        color: #666666;
+        font-weight: 400;
+    }
+}

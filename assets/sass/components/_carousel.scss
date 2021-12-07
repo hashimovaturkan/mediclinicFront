@@ -22,8 +22,8 @@
         position: relative;
         margin: 0%;
         //background-image: url("../images/slider-1.jpg");
-        &--store{
-            width: auto;
+        &--department{
+            width: 30%;
             margin-right: 4.2rem;
         }
     }
@@ -95,4 +95,23 @@
 .flickity-prev-next-button .flickity-button-icon{
     left: 30%;
     width:38%;
+}
+
+.all-departments{
+    .previous{
+        left: -30px;
+        &:hover{
+            border: 1px solid $blue-v3;
+        }
+    }
+    .next{
+        right: -20px;
+        &:hover{
+            border: 1px solid $blue-v3;
+        }
+
+    }
+    .flickity-page-dots .dot {
+        display: inline-block;
+    }
 }

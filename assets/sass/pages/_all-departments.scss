@@ -1,0 +1,15 @@
+.all-departments{
+    padding: 8rem 0;
+    background-image: url('../images/pattern-5.png');
+    &__wrapper{
+        background-image: url('../images/departments-title-img.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 26rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
