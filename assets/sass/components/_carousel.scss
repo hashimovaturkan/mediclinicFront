@@ -2,8 +2,13 @@
     // background-image: url("../icons/Vector-slider.svg");
     // background-position: left bottom;
     // background-repeat: no-repeat;
+    &--none{
+        background-color: transparent;
+        margin-bottom: 2.4rem;
+    }
     &__wrapper{
-        //background-image: $gradient-color;
+        padding: 5rem 0;
+        background-color: $white;
     }
     &__content{
         position: relative;
@@ -21,6 +26,10 @@
         border-radius: 5px;
         position: relative;
         margin: 0%;
+        &--store{
+            width: auto;
+            margin-right: 4.2rem;
+        }
         //background-image: url("../images/slider-1.jpg");
         &--department{
             width: 30%;
@@ -35,6 +44,21 @@
         height: 100%;
         object-fit: cover;
 
+    }
+    &__store-link{
+        width: 200px !important;
+        height: 200px !important;
+        background-color: #fff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__store-img{
+        max-height: 170px;
+        max-width: 170px;
+        width: auto;
+        height: auto;
     }
     &__text{
         font-weight: 300;

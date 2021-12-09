@@ -15,6 +15,72 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <div class="appointment-modal__wrapper">
+        <div class="appointment-modal">
+            <div class="appointment-modal__form-wrapper">
+                <div class="appointment-modal__title-box">
+                    <h4>Make an Appointment</h4>
+                    <div class="appointment-modal__title-text">
+                        We provide the most full medical services, so every person could have the <br>
+                        oportunity to receive qualitative medical help.
+                    </div>
+                </div>
+                <form action="" class="appointment-modal__form">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <input type="text" class="appointment-modal__input" placeholder="Your Name">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <input type="tel" class="appointment-modal__input" placeholder="Your Phone">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <input type="email" class="appointment-modal__input" placeholder="Your E-mail">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <select class="appointment-modal__input appointment-modal__input--select">
+                                <option value="default" selected="" disabled="">Select Departments</option>
+                                <option value="Cardiology">Cardiology</option>
+                                <option value="Neurology">Neurology</option>
+                                <option value="Urology">Urology</option>
+                                <option value="Gynecological">Gynecological</option>
+                                <option value="Pediatrical">Pediatrical</option>
+                                <option value="Laboratory">Laboratory</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <input type="date" class="appointment-modal__input" placeholder="Select Date">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <select class="appointment-modal__input appointment-modal__input--select">
+                                    <option value="" selected="" disabled="" style="display: none;">Select Time</option>
+                                    <option value="" data-value="default" disabled="" style="display: none;">Please select a department</option>
+                                    <option value="10:00AM - 12:00AM" data-value="Cardiology" style="display: block;">10:00AM - 12:00AM</option>
+                                    <option value="12:00AM - 02:00AM" data-value="Cardiology" style="display: block;">12:00AM - 02:00AM</option>
+                                    <option value="02:00PM - 04:00PM" data-value="Neurology" style="display: none;">02:00PM - 04:00PM</option>
+                                    <option value="04:00PM - 06:00PM" data-value="Neurology" style="display: none;">04:00PM - 06:00PM</option>
+                                    <option value="06:00PM - 08:00PM" data-value="Urology" style="display: none;">06:00PM - 08:00PM</option>
+                                    <option value="10:00AM - 12:00AM" data-value="Urology" style="display: none;">10:00AM - 12:00AM</option>
+                                    <option value="12:00AM - 02:00AM" data-value="Gynecological" style="display: none;">12:00AM - 02:00AM</option>
+                                    <option value="02:00PM - 04:00PM" data-value="Gynecological" style="display: none;">02:00PM - 04:00PM</option>
+                                    <option value="04:00PM - 06:00PM" data-value="Pediatrical" style="display: none;">04:00PM - 06:00PM</option>
+                                    <option value="06:00PM - 08:00PM" data-value="Pediatrical" style="display: none;">06:00PM - 08:00PM</option>
+                                    <option value="10:00AM - 12:00AM" data-value="Laboratory" style="display: none;">10:00AM - 12:00AM</option>
+                                    <option value="12:00AM - 02:00AM" data-value="Laboratory" style="display: none;">12:00AM - 02:00AM</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                            <textarea type="date" class="appointment-modal__input appointment-modal__input--textarea" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                            <a href="#" class="btn btn--black">Submit now</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="appointment-modal__form-close"></a>
+        </div>
+    </div>
     <header class="header">
         <div class="header__top">
             <div class="custom-container">
@@ -258,200 +324,42 @@
             </div>
         </div>
     </section>
-    <!-- <section class="doctor-details">
-        <div class="custom-container">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                    <div class="doctor-details__info">
-                        <img src="./assets/images/team-member-2.jpg" class="doctor-details__img" alt="doctor">
-                        <h3 class="doctor-details__name">Jordan Kelley</h3>
-                        <span class="doctor-details__position">Cardiology</span>
-                        <div class="doctor-details__bio">
-                            <div class="doctor-details__contact">
-                                <i class="fa fa-phone doctor-details__icon"></i>
-                                <a target="_self" class="doctor-details__link" href="tel:+1258888455">
-                                    + (123) 1800-567-8990
-                                </a>
-                            </div>
-                            <div class="doctor-details__contact">
-                                <i class="fa fa-envelope doctor-details__icon"></i>
-                                <a target="_self" class="doctor-details__link" href="mailto:clinic@qodeinteractive.com">
-                                    clinic@qodeinteractive.com
-                                </a>
-                            </div>
-                        </div>
-                        <ul class="doctor-details__social">
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
+    <section class="all-departments__advertisement">
+            <div class="carousel__wrapper">
+                <div class="carousel--none" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "groupCells": 1, "pageDots": false}'>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/1.png" alt="" class="carousel__store-img">
+                        </a>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                    <div class="doctor-details__desc">
-                        <h4 class="doctor-details__text-main">
-                            Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo non habent claritatem insitamconsequat duis autem facilisis at vero eros vel eum iriure. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-                        </h4>
-                        <p class="doctor-details__text">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Ulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.
-                        </p>
-                        <div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Specialty</span>
-                                <span class="doctor-details__info-desc">Cardiology</span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Education</span>
-                                <span class="doctor-details__info-desc">
-                                    Doctor of Medicine, <br>
-                                    University of Texas, USA (1990) Medical Orientation Program,  <br>
-                                    St. Louis University (St. Louis, Missouri 1996)
-                                                                </span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Experience</span>
-                                <span class="doctor-details__info-desc">
-                                    25 years of Experience in Medicine</span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">
-                                    Work Days</span>
-                                <span class="doctor-details__info-desc">
-                                    Monday - Friday 08:00 - 20:00 </br>
-                                    Saturday  09:00 - 18:00 </br>
-                                    Sunday     09:00 - 18:00
-                                </span>
-                            </div>
-                        </div>
-                        <div class="doctor-details__appointment">
-                            <h3 class="subtitle">Online Appoinment</h3>
-                            <h2 class="title">
-                                Make An Appointment
-                            </h2>
-                            <span>
-                                <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
-                            </span>
-                            <form action="">
-                                <input class="doctor-details__input" type="text" name="" id="" placeholder="Your Name">
-                                <input class="doctor-details__input" type="text" name="" id="" placeholder="Your Phone">
-                                <input class="doctor-details__input" type="email" name="" id="" placeholder="Your E-mail">
-                                <textarea class="doctor-details__input doctor-details__input--textbox" name="" id="" cols="30" rows="10" placeholder="Tell us about Pasent"></textarea>
-                                <a href="#" class="btn btn--black">Submit Query</a>
-                            </form>
-                        </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/2.png" alt="" class="carousel__store-img">
+                        </a>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                    <div class="doctor-details__desc">
-                        <h4 class="doctor-details__text-main">
-                            Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo non habent claritatem insitamconsequat duis autem facilisis at vero eros vel eum iriure. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-                        </h4>
-                        <p class="doctor-details__text">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Ulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.
-                        </p>
-                        <div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Specialty</span>
-                                <span class="doctor-details__info-desc">Cardiology</span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Education</span>
-                                <span class="doctor-details__info-desc">
-                                    Doctor of Medicine, <br>
-                                    University of Texas, USA (1990) Medical Orientation Program,  <br>
-                                    St. Louis University (St. Louis, Missouri 1996)
-                                                                </span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Experience</span>
-                                <span class="doctor-details__info-desc">
-                                    25 years of Experience in Medicine</span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">
-                                    Work Days</span>
-                                <span class="doctor-details__info-desc">
-                                    Monday - Friday 08:00 - 20:00 </br>
-                                    Saturday  09:00 - 18:00 </br>
-                                    Sunday     09:00 - 18:00
-                                </span>
-                            </div>
-                        </div>
-                        <div class="doctor-details__appointment">
-                            <h3 class="subtitle">Online Appoinment</h3>
-                            <h2 class="title">
-                                Make An Appointment
-                            </h2>
-                            <span>
-                                <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
-                            </span>
-                            <form action="">
-                                <input class="doctor-details__input" type="text" name="" id="" placeholder="Your Name">
-                                <input class="doctor-details__input" type="text" name="" id="" placeholder="Your Phone">
-                                <input class="doctor-details__input" type="email" name="" id="" placeholder="Your E-mail">
-                                <textarea class="doctor-details__input doctor-details__input--textbox" name="" id="" cols="30" rows="10" placeholder="Tell us about Pasent"></textarea>
-                                <a href="#" class="btn btn--black">Submit Query</a>
-                            </form>
-                        </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/3.png" alt="" class="carousel__store-img">
+                        </a>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                    <div class="doctor-details__desc">
-                        <h4 class="doctor-details__text-main">
-                            Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo non habent claritatem insitamconsequat duis autem facilisis at vero eros vel eum iriure. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-                        </h4>
-                        <p class="doctor-details__text">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Ulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.
-                        </p>
-                        <div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Specialty</span>
-                                <span class="doctor-details__info-desc">Cardiology</span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Education</span>
-                                <span class="doctor-details__info-desc">
-                                    Doctor of Medicine, <br>
-                                    University of Texas, USA (1990) Medical Orientation Program,  <br>
-                                    St. Louis University (St. Louis, Missouri 1996)
-                                                                </span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">Experience</span>
-                                <span class="doctor-details__info-desc">
-                                    25 years of Experience in Medicine</span>
-                            </div>
-                            <div class="doctor-details__row">
-                                <span class="doctor-details__info-title">
-                                    Work Days</span>
-                                <span class="doctor-details__info-desc">
-                                    Monday - Friday 08:00 - 20:00 </br>
-                                    Saturday  09:00 - 18:00 </br>
-                                    Sunday     09:00 - 18:00
-                                </span>
-                            </div>
-                        </div>
-                        <div class="doctor-details__appointment">
-                            <h3 class="subtitle">Online Appoinment</h3>
-                            <h2 class="title">
-                                Make An Appointment
-                            </h2>
-                            <span>
-                                <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
-                            </span>
-                            <form action="">
-                                <input class="doctor-details__input" type="text" name="" id="" placeholder="Your Name">
-                                <input class="doctor-details__input" type="text" name="" id="" placeholder="Your Phone">
-                                <input class="doctor-details__input" type="email" name="" id="" placeholder="Your E-mail">
-                                <textarea class="doctor-details__input doctor-details__input--textbox" name="" id="" cols="30" rows="10" placeholder="Tell us about Pasent"></textarea>
-                                <a href="#" class="btn btn--black">Submit Query</a>
-                            </form>
-                        </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/4.png" alt="" class="carousel__store-img">
+                        </a>
+                    </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/5.png" alt="" class="carousel__store-img">
+                        </a>
+                    </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/3.png" alt="" class="carousel__store-img">
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section> -->
+    </section>
     <script src="./assets/flickity/flickity.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>

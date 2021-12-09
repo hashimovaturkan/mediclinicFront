@@ -7828,6 +7828,7 @@ body {
 
 .btn {
   display: inline-block;
+  cursor: pointer;
   padding: .75rem 1.25rem;
   color: #fff;
   text-transform: uppercase;
@@ -7871,6 +7872,14 @@ body {
     .btn:hover:before {
       width: 100%; }
 
+.carousel--none {
+  background-color: transparent;
+  margin-bottom: 2.4rem; }
+
+.carousel__wrapper {
+  padding: 5rem 0;
+  background-color: #fff; }
+
 .carousel__content {
   position: relative;
   z-index: 3;
@@ -7887,6 +7896,9 @@ body {
   border-radius: 5px;
   position: relative;
   margin: 0%; }
+  .carousel__cell--store {
+    width: auto;
+    margin-right: 4.2rem; }
   .carousel__cell--department {
     width: 30%;
     margin-right: 4.2rem; }
@@ -7898,6 +7910,21 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover; }
+
+.carousel__store-link {
+  width: 200px !important;
+  height: 200px !important;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.carousel__store-img {
+  max-height: 170px;
+  max-width: 170px;
+  width: auto;
+  height: auto; }
 
 .carousel__text {
   font-weight: 300;
@@ -8170,6 +8197,108 @@ body {
     line-height: 26px;
     color: #666666;
     font-weight: 400; }
+
+.appointment-modal {
+  padding: 0px;
+  border-radius: 0px;
+  overflow: unset;
+  max-width: 1000px;
+  height: auto;
+  margin: auto;
+  vertical-align: middle;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 90%;
+  background: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -o-box-shadow: 0 0 10px #000;
+  -ms-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  text-align: left; }
+  .appointment-modal__wrapper {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    transition: all 300ms ease-in-out; }
+  .appointment-modal__form-wrapper {
+    position: relative;
+    padding: 50px 40px;
+    background-color: whitesmoke;
+    border: 10px solid white;
+    background-image: url("../images/pattern-11.png"); }
+  .appointment-modal__form-close {
+    position: absolute;
+    top: -12.5px;
+    right: -12.5px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAA3hJREFUaAXlm8+K00Acx7MiCIJH/yw+gA9g25O49SL4AO3Bp1jw5NvktC+wF88qevK4BU97EmzxUBCEolK/n5gp3W6TTJPfpNPNF37MNsl85/vN/DaTmU6PknC4K+pniqeKJ3k8UnkvDxXJzzy+q/yaxxeVHxW/FNHjgRSeKt4rFoplzaAuHHDBGR2eS9G54reirsmienDCTRt7xwsp+KAoEmt9nLaGitZxrBbPFNaGfPloGw2t4JVamSt8xYW6Dg1oCYo3Yv+rCGViV160oMkcd8SYKnYV1Nb1aEOjCe6L5ZOiLfF120EjWhuBu3YIZt1NQmujnk5F4MgOpURzLfAwOBSTmzp3fpDxuI/pabxpqOoz2r2HLAb0GMbZKlNV5/Hg9XJypguryA7lPF5KMdTZQzHjqxNPhWhzIuAruOl1eNqKEx1tSh5rfbxdw7mOxCq4qS68ZTjKS1YVvilu559vWvFHhh4rZrdyZ69Vmpgdj8fJbDZLJpNJ0uv1cnr/gjrUhQMuI+ANjyuwftQ0bbL6Erp0mM/ny8Fg4M3LtdRxgMtKl3jwmIHVxYXChFy94/Rmpa/pTbNUhstKV+4Rr8lLQ9KlUvJKLyG8yvQ2s9SBy1Jb7jV5a0yapfF6apaZLjLLcWtd4sNrmJUMHyM+1xibTjH82Zh01TNlhsrOhdKTe00uAzZQmN6+KW+sDa/JD2PSVQ873m29yf+1Q9VDzfEYlHi1G5LKBBWZbtEsHbFwb1oYDwr1ZiF/2bnCSg1OBE/pfr9/bWx26UxJL3ONPISOLKUvQza0LZUxSKyjpdTGa/vDEr25rddbMM0Q3O6Lx3rqFvU+x6UrRKQY7tyrZecmD9FODy8uLizTmilwNj0kraNcAJhOp5aGVwsAGD5VmJBrWWbJSgWT9zrzWepQF47RaGSiKfeGx6Szi3gzmX/HHbihwBser4B9UJYpFBNX4R6vTn3VQnez0SymnrHQMsRYGTr1dSk34ljRqS/EMd2pLQ8YBp3a1PLfcqCpo8gtHkZFHKkTX6fs3MY0blKnth66rKCnU0VRGu37ONrQaA4eZDFtWAu2fXj9zjFkxTBOo8F7t926gTp/83Kyzzcy2kZD6xiqxTYnHLRFm3vHiRSwNSjkz3hoIzo8lCKWUlg/YtGs7tObunDAZfpDLbfEI15zsEIY3U/x/gHHc/G1zltnAgAAAABJRU5ErkJggg==); }
+  .appointment-modal__title-box {
+    position: relative;
+    margin-bottom: 30px; }
+    .appointment-modal__title-box h4 {
+      position: relative;
+      display: block;
+      font-size: 28px;
+      line-height: 1.2em;
+      color: #222222;
+      margin-bottom: 10px;
+      font-weight: 600; }
+  .appointment-modal__title-text {
+    font-size: 15px;
+    line-height: 26px;
+    color: #666666;
+    font-weight: 400;
+    margin: 0px; }
+  .appointment-modal__row {
+    padding: 0 10px;
+    margin-bottom: 20px; }
+  .appointment-modal__input {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #999999;
+    line-height: 20px;
+    padding: 10px 20px;
+    border: 1px solid #f1f1f1;
+    background-color: #ffffff;
+    font-weight: 400;
+    height: 50px;
+    border-radius: 5px;
+    -webkit-transition: all 300ms ease; }
+    .appointment-modal__input--select {
+      cursor: pointer;
+      -webkit-appearance: none;
+      background: #ffffff url(../images/icon-select.png) right center no-repeat; }
+    .appointment-modal__input--textarea {
+      height: 150px;
+      resize: none;
+      padding: 15px 20px; }
 
 .header__top {
   background-color: #fff;
@@ -8726,3 +8855,5 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
+  .all-departments__advertisement {
+    padding: 8rem 0; }

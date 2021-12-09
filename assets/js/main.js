@@ -105,7 +105,7 @@ const timetableLink = document.querySelectorAll(".selector__link");
 const timetableTarget = document.querySelector(".selector__target span");
 const timetableDropdown = document.querySelector(".selector__dropdown");
 
-timetableTarget.addEventListener("click",function(e){
+timetableTarget?.addEventListener("click",function(e){
   timetableDropdown.classList.toggle("d-none");
   e.preventDefault();
   e.stopPropagation();
@@ -114,10 +114,10 @@ timetableTarget.addEventListener("click",function(e){
 document.addEventListener("click",function(e){
   e.preventDefault();
   e.stopPropagation();
-  timetableDropdown.classList.add("d-none");
+  timetableDropdown?.classList.add("d-none");
 })
 
-timetableLink.forEach(function(item){
+timetableLink?.forEach(function(item){
   item.addEventListener("click",function(e){
     e.preventDefault();
     e.stopPropagation();
@@ -130,4 +130,23 @@ timetableLink.forEach(function(item){
     const next = item.querySelector(".timetable__dropdown");
     next.classList.add("d-none");
   })
+})
+
+
+//appointment-modal
+const appointmentModal = document.querySelector(".appointment-modal__wrapper");
+const appointmentModalCloseBtn = document.querySelector(".appointment-modal__form-close");
+const appointmentModalOpenBtn = document.querySelector(".makeAppointmentModal");
+
+appointmentModalCloseBtn.addEventListener("click",function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  appointmentModal.style.opacity="0";
+  appointmentModal.style.visibility="hidden";
+})
+appointmentModalOpenBtn.addEventListener("click",function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  appointmentModal.style.opacity="1";
+  appointmentModal.style.visibility="visible";
 })

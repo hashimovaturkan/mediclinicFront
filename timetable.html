@@ -15,6 +15,72 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <div class="appointment-modal__wrapper">
+        <div class="appointment-modal">
+            <div class="appointment-modal__form-wrapper">
+                <div class="appointment-modal__title-box">
+                    <h4>Make an Appointment</h4>
+                    <div class="appointment-modal__title-text">
+                        We provide the most full medical services, so every person could have the <br>
+                        oportunity to receive qualitative medical help.
+                    </div>
+                </div>
+                <form action="" class="appointment-modal__form">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <input type="text" class="appointment-modal__input" placeholder="Your Name">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <input type="tel" class="appointment-modal__input" placeholder="Your Phone">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <input type="email" class="appointment-modal__input" placeholder="Your E-mail">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <select class="appointment-modal__input appointment-modal__input--select">
+                                <option value="default" selected="" disabled="">Select Departments</option>
+                                <option value="Cardiology">Cardiology</option>
+                                <option value="Neurology">Neurology</option>
+                                <option value="Urology">Urology</option>
+                                <option value="Gynecological">Gynecological</option>
+                                <option value="Pediatrical">Pediatrical</option>
+                                <option value="Laboratory">Laboratory</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <input type="date" class="appointment-modal__input" placeholder="Select Date">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                            <select class="appointment-modal__input appointment-modal__input--select">
+                                    <option value="" selected="" disabled="" style="display: none;">Select Time</option>
+                                    <option value="" data-value="default" disabled="" style="display: none;">Please select a department</option>
+                                    <option value="10:00AM - 12:00AM" data-value="Cardiology" style="display: block;">10:00AM - 12:00AM</option>
+                                    <option value="12:00AM - 02:00AM" data-value="Cardiology" style="display: block;">12:00AM - 02:00AM</option>
+                                    <option value="02:00PM - 04:00PM" data-value="Neurology" style="display: none;">02:00PM - 04:00PM</option>
+                                    <option value="04:00PM - 06:00PM" data-value="Neurology" style="display: none;">04:00PM - 06:00PM</option>
+                                    <option value="06:00PM - 08:00PM" data-value="Urology" style="display: none;">06:00PM - 08:00PM</option>
+                                    <option value="10:00AM - 12:00AM" data-value="Urology" style="display: none;">10:00AM - 12:00AM</option>
+                                    <option value="12:00AM - 02:00AM" data-value="Gynecological" style="display: none;">12:00AM - 02:00AM</option>
+                                    <option value="02:00PM - 04:00PM" data-value="Gynecological" style="display: none;">02:00PM - 04:00PM</option>
+                                    <option value="04:00PM - 06:00PM" data-value="Pediatrical" style="display: none;">04:00PM - 06:00PM</option>
+                                    <option value="06:00PM - 08:00PM" data-value="Pediatrical" style="display: none;">06:00PM - 08:00PM</option>
+                                    <option value="10:00AM - 12:00AM" data-value="Laboratory" style="display: none;">10:00AM - 12:00AM</option>
+                                    <option value="12:00AM - 02:00AM" data-value="Laboratory" style="display: none;">12:00AM - 02:00AM</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                            <textarea type="date" class="appointment-modal__input appointment-modal__input--textarea" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                            <a href="#" class="btn btn--black">Submit now</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="appointment-modal__form-close"></a>
+        </div>
+    </div>
     <header class="header">
         <div class="header__top">
             <div class="custom-container">
