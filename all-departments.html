@@ -15,351 +15,355 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="appointment-modal__wrapper">
-        <div class="appointment-modal">
-            <div class="appointment-modal__form-wrapper">
-                <div class="appointment-modal__title-box">
-                    <h4>Make an Appointment</h4>
-                    <div class="appointment-modal__title-text">
-                        We provide the most full medical services, so every person could have the <br>
-                        oportunity to receive qualitative medical help.
+    <div id="loading"></div>
+    <div class="page">
+        <div class="appointment-modal__wrapper">
+            <div class="appointment-modal">
+                <div class="appointment-modal__form-wrapper">
+                    <div class="appointment-modal__title-box">
+                        <h4>Make an Appointment</h4>
+                        <div class="appointment-modal__title-text">
+                            We provide the most full medical services, so every person could have the <br>
+                            oportunity to receive qualitative medical help.
+                        </div>
+                    </div>
+                    <form action="" class="appointment-modal__form">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="text" class="appointment-modal__input" placeholder="Your Name">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="tel" class="appointment-modal__input" placeholder="Your Phone">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="email" class="appointment-modal__input" placeholder="Your E-mail">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <select class="appointment-modal__input appointment-modal__input--select">
+                                    <option value="default" selected="" disabled="">Select Departments</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Urology">Urology</option>
+                                    <option value="Gynecological">Gynecological</option>
+                                    <option value="Pediatrical">Pediatrical</option>
+                                    <option value="Laboratory">Laboratory</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="date" class="appointment-modal__input" placeholder="Select Date">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <select class="appointment-modal__input appointment-modal__input--select">
+                                        <option value="" selected="" disabled="" style="display: none;">Select Time</option>
+                                        <option value="" data-value="default" disabled="" style="display: none;">Please select a department</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Cardiology" style="display: block;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Cardiology" style="display: block;">12:00AM - 02:00AM</option>
+                                        <option value="02:00PM - 04:00PM" data-value="Neurology" style="display: none;">02:00PM - 04:00PM</option>
+                                        <option value="04:00PM - 06:00PM" data-value="Neurology" style="display: none;">04:00PM - 06:00PM</option>
+                                        <option value="06:00PM - 08:00PM" data-value="Urology" style="display: none;">06:00PM - 08:00PM</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Urology" style="display: none;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Gynecological" style="display: none;">12:00AM - 02:00AM</option>
+                                        <option value="02:00PM - 04:00PM" data-value="Gynecological" style="display: none;">02:00PM - 04:00PM</option>
+                                        <option value="04:00PM - 06:00PM" data-value="Pediatrical" style="display: none;">04:00PM - 06:00PM</option>
+                                        <option value="06:00PM - 08:00PM" data-value="Pediatrical" style="display: none;">06:00PM - 08:00PM</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Laboratory" style="display: none;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Laboratory" style="display: none;">12:00AM - 02:00AM</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                                <textarea type="date" class="appointment-modal__input appointment-modal__input--textarea" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                                <a href="#" class="btn btn--black">Submit now</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="appointment-modal__form-close"></a>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header__top">
+                <div class="custom-container">
+                    <div class="header__top-inner">
+                        <a href="./index.html" class="header__top-logo">
+                            <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
+                        </a>
+                        <div class="header__top-main">
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <a target="_self" href="tel:+1258888455">
+                                        <i class="fa fa-phone header__info-fa"></i>
+                                    </a>
+                                </div>
+                                <div class="header__info-text">
+                                    <a target="_self" class="header__info-first" href="tel:+1258888455">
+                                        + (123) 1800-567-8990
+                                    </a>
+                                    <span>
+                                        + (123) 1800-453-1546
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <i class="fa fa-clock-o header__info-fa"></i>
+                                </div>
+                                <div class="header__info-text">
+                                    <span class="header__info-first">
+                                        Mon - Fri: 9:00AM - 5:00PM
+                                    </span>
+                                    <span>
+                                        Sat - Sun: Closed
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <a target="_self" href="tel:+1258888455">
+                                        <i class="fa fa-envelope header__info-fa"></i>
+                                    </a>
+                                </div>
+                                <div class="header__info-text">
+                                    <a target="_self" class="header__info-first" href="mailto:mediclinic@qodeinteractive.com">
+                                        mediclinic@qodeinteractive.com
+                                    </a>
+                                    <span>
+                                        clinic@qodeinteractive.com
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <form action="" class="appointment-modal__form">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="text" class="appointment-modal__input" placeholder="Your Name">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="tel" class="appointment-modal__input" placeholder="Your Phone">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="email" class="appointment-modal__input" placeholder="Your E-mail">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <select class="appointment-modal__input appointment-modal__input--select">
-                                <option value="default" selected="" disabled="">Select Departments</option>
-                                <option value="Cardiology">Cardiology</option>
-                                <option value="Neurology">Neurology</option>
-                                <option value="Urology">Urology</option>
-                                <option value="Gynecological">Gynecological</option>
-                                <option value="Pediatrical">Pediatrical</option>
-                                <option value="Laboratory">Laboratory</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="date" class="appointment-modal__input" placeholder="Select Date">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <select class="appointment-modal__input appointment-modal__input--select">
-                                    <option value="" selected="" disabled="" style="display: none;">Select Time</option>
-                                    <option value="" data-value="default" disabled="" style="display: none;">Please select a department</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Cardiology" style="display: block;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Cardiology" style="display: block;">12:00AM - 02:00AM</option>
-                                    <option value="02:00PM - 04:00PM" data-value="Neurology" style="display: none;">02:00PM - 04:00PM</option>
-                                    <option value="04:00PM - 06:00PM" data-value="Neurology" style="display: none;">04:00PM - 06:00PM</option>
-                                    <option value="06:00PM - 08:00PM" data-value="Urology" style="display: none;">06:00PM - 08:00PM</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Urology" style="display: none;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Gynecological" style="display: none;">12:00AM - 02:00AM</option>
-                                    <option value="02:00PM - 04:00PM" data-value="Gynecological" style="display: none;">02:00PM - 04:00PM</option>
-                                    <option value="04:00PM - 06:00PM" data-value="Pediatrical" style="display: none;">04:00PM - 06:00PM</option>
-                                    <option value="06:00PM - 08:00PM" data-value="Pediatrical" style="display: none;">06:00PM - 08:00PM</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Laboratory" style="display: none;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Laboratory" style="display: none;">12:00AM - 02:00AM</option>
+            </div>
+            <div class="header__bottom">
+                <div class="custom-container">
+                    <div class="header__bottom-wrapper">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a href="./about.html" class="menu__list-link">Home</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Doctors</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our doctors</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Timetable</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Departments</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">All Departments</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cardiology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Neurology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Urology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Gynecological</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Pediatrical</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Laboratory</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Blogs</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Shop</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">My Account</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cart</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Checkout</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">About us</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Who We Are</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clinic</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Services</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Process</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clients</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">FAQ</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Working Hours</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Contact us</a>
+                                </li>
+                                <li class="menu__list-elem"></li>
+                            </ul>
+                        </nav>
+                        <div class="header__user-side">
+                            <a href="#" class="btn btn--primary">
+                                Make an Appointment
+                            </a>
+                            <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="header__user-side-circle">
+                                    <span class="header__user-side-count">2</span>
+                                </span>
                                 
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
-                            <textarea type="date" class="appointment-modal__input appointment-modal__input--textarea" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
-                            <a href="#" class="btn btn--black">Submit now</a>
+                            </a>
+                            <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-search"></i>
+                            </a>
+                            <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-bars"></i>
+                            </a>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-            <a href="#" class="appointment-modal__form-close"></a>
-        </div>
+        </header>
+        <section class="doctor-details-main">
+            <div class="custom-container-fluid p-0 main__img">
+                <div class="all-departments__wrapper">
+                    <h1 class="main__title">All Departments</h1>
+                    <span class="main__subtitle">Home  /  All Departments</span>
+                </div>
+            </div>
+        </section>
+        <section class="all-departments">
+            <div class="custom-container">
+                <div class="carousel__wrapper">
+                    <div class="carousel" data-flickity='{ "autoPlay": 4000, "wrapAround": true,  "selectedAttraction": 0.2,"friction": 0.8, "pauseAutoPlayOnHover": true, "groupCells": true}'>
+                        <div class="carousel__cell carousel__cell--department">
+                            <div class="department-cart">
+                                <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
+                                <div class="department-cart__body">
+                                    <h2 class="department-cart__title">
+                                        <span class="icon flaticon-heart-2"></span>
+                                        Cardiology Department
+                                    </h2>
+                                    <p class="department-cart__text">
+                                        Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__cell carousel__cell--department">
+                            <div class="department-cart">
+                                <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
+                                <div class="department-cart__body">
+                                    <h2 class="department-cart__title">
+                                        <span class="icon flaticon-heart-2"></span>
+                                        Cardiology Department
+                                    </h2>
+                                    <p class="department-cart__text">
+                                        Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__cell carousel__cell--department">
+                            <div class="department-cart">
+                                <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
+                                <div class="department-cart__body">
+                                    <h2 class="department-cart__title">
+                                        <span class="icon flaticon-heart-2"></span>
+                                        Cardiology Department
+                                    </h2>
+                                    <p class="department-cart__text">
+                                        Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__cell carousel__cell--department">
+                            <div class="department-cart">
+                                <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
+                                <div class="department-cart__body">
+                                    <h2 class="department-cart__title">
+                                        <span class="icon flaticon-heart-2"></span>
+                                        Cardiology Department
+                                    </h2>
+                                    <p class="department-cart__text">
+                                        Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__cell carousel__cell--department">
+                            <div class="department-cart">
+                                <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
+                                <div class="department-cart__body">
+                                    <h2 class="department-cart__title">
+                                        <span class="icon flaticon-heart-2"></span>
+                                        Cardiology Department
+                                    </h2>
+                                    <p class="department-cart__text">
+                                        Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__cell carousel__cell--department">
+                            <div class="department-cart">
+                                <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
+                                <div class="department-cart__body">
+                                    <h2 class="department-cart__title">
+                                        <span class="icon flaticon-heart-2"></span>
+                                        Cardiology Department
+                                    </h2>
+                                    <p class="department-cart__text">
+                                        Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="all-departments__advertisement">
+                <div class="carousel__wrapper">
+                    <div class="carousel--none" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "groupCells": 1, "pageDots": false}'>
+                        <div class="carousel__cell carousel__cell--store">
+                            <a href="" class="carousel__store-link" >
+                                <img src="./assets/images/1.png" alt="" class="carousel__store-img">
+                            </a>
+                        </div>
+                        <div class="carousel__cell carousel__cell--store">
+                            <a href="" class="carousel__store-link" >
+                                <img src="./assets/images/2.png" alt="" class="carousel__store-img">
+                            </a>
+                        </div>
+                        <div class="carousel__cell carousel__cell--store">
+                            <a href="" class="carousel__store-link" >
+                                <img src="./assets/images/3.png" alt="" class="carousel__store-img">
+                            </a>
+                        </div>
+                        <div class="carousel__cell carousel__cell--store">
+                            <a href="" class="carousel__store-link" >
+                                <img src="./assets/images/4.png" alt="" class="carousel__store-img">
+                            </a>
+                        </div>
+                        <div class="carousel__cell carousel__cell--store">
+                            <a href="" class="carousel__store-link" >
+                                <img src="./assets/images/5.png" alt="" class="carousel__store-img">
+                            </a>
+                        </div>
+                        <div class="carousel__cell carousel__cell--store">
+                            <a href="" class="carousel__store-link" >
+                                <img src="./assets/images/3.png" alt="" class="carousel__store-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
     </div>
-    <header class="header">
-        <div class="header__top">
-            <div class="custom-container">
-                <div class="header__top-inner">
-                    <a href="./index.html" class="header__top-logo">
-                        <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
-                    </a>
-                    <div class="header__top-main">
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <a target="_self" href="tel:+1258888455">
-                                    <i class="fa fa-phone header__info-fa"></i>
-                                </a>
-                            </div>
-                            <div class="header__info-text">
-                                <a target="_self" class="header__info-first" href="tel:+1258888455">
-                                    + (123) 1800-567-8990
-                                </a>
-                                <span>
-                                    + (123) 1800-453-1546
-                                </span>
-                            </div>
-                        </div>
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <i class="fa fa-clock-o header__info-fa"></i>
-                            </div>
-                            <div class="header__info-text">
-                                <span class="header__info-first">
-                                    Mon - Fri: 9:00AM - 5:00PM
-                                </span>
-                                <span>
-                                    Sat - Sun: Closed
-                                </span>
-                            </div>
-                        </div>
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <a target="_self" href="tel:+1258888455">
-                                    <i class="fa fa-envelope header__info-fa"></i>
-                                </a>
-                            </div>
-                            <div class="header__info-text">
-                                <a target="_self" class="header__info-first" href="mailto:mediclinic@qodeinteractive.com">
-                                    mediclinic@qodeinteractive.com
-                                </a>
-                                <span>
-                                    clinic@qodeinteractive.com
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header__bottom">
-            <div class="custom-container">
-                <div class="header__bottom-wrapper">
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__list-item">
-                                <a href="./about.html" class="menu__list-link">Home</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Doctors</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our doctors</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Timetable</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Departments</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">All Departments</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cardiology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Neurology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Urology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Gynecological</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Pediatrical</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Laboratory</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Blogs</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Shop</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">My Account</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cart</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Checkout</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">About us</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Who We Are</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clinic</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Services</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Process</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clients</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">FAQ</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Working Hours</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Contact us</a>
-                            </li>
-                            <li class="menu__list-elem"></li>
-                        </ul>
-                    </nav>
-                    <div class="header__user-side">
-                        <a href="#" class="btn btn--primary">
-                            Make an Appointment
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span class="header__user-side-circle">
-                                <span class="header__user-side-count">2</span>
-                            </span>
-                            
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="doctor-details-main">
-        <div class="custom-container-fluid p-0 main__img">
-            <div class="all-departments__wrapper">
-                <h1 class="main__title">All Departments</h1>
-                <span class="main__subtitle">Home  /  All Departments</span>
-            </div>
-        </div>
-    </section>
-    <section class="all-departments">
-        <div class="custom-container">
-            <div class="carousel__wrapper">
-                <div class="carousel" data-flickity='{ "autoPlay": 4000, "wrapAround": true,  "selectedAttraction": 0.2,"friction": 0.8, "pauseAutoPlayOnHover": true, "groupCells": true}'>
-                    <div class="carousel__cell carousel__cell--department">
-                        <div class="department-cart">
-                            <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
-                            <div class="department-cart__body">
-                                <h2 class="department-cart__title">
-                                    <span class="icon flaticon-heart-2"></span>
-                                    Cardiology Department
-                                </h2>
-                                <p class="department-cart__text">
-                                    Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel__cell carousel__cell--department">
-                        <div class="department-cart">
-                            <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
-                            <div class="department-cart__body">
-                                <h2 class="department-cart__title">
-                                    <span class="icon flaticon-heart-2"></span>
-                                    Cardiology Department
-                                </h2>
-                                <p class="department-cart__text">
-                                    Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel__cell carousel__cell--department">
-                        <div class="department-cart">
-                            <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
-                            <div class="department-cart__body">
-                                <h2 class="department-cart__title">
-                                    <span class="icon flaticon-heart-2"></span>
-                                    Cardiology Department
-                                </h2>
-                                <p class="department-cart__text">
-                                    Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel__cell carousel__cell--department">
-                        <div class="department-cart">
-                            <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
-                            <div class="department-cart__body">
-                                <h2 class="department-cart__title">
-                                    <span class="icon flaticon-heart-2"></span>
-                                    Cardiology Department
-                                </h2>
-                                <p class="department-cart__text">
-                                    Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel__cell carousel__cell--department">
-                        <div class="department-cart">
-                            <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
-                            <div class="department-cart__body">
-                                <h2 class="department-cart__title">
-                                    <span class="icon flaticon-heart-2"></span>
-                                    Cardiology Department
-                                </h2>
-                                <p class="department-cart__text">
-                                    Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel__cell carousel__cell--department">
-                        <div class="department-cart">
-                            <img class="department-cart__img" src="./assets/images/service-1.jpg" alt="">
-                            <div class="department-cart__body">
-                                <h2 class="department-cart__title">
-                                    <span class="icon flaticon-heart-2"></span>
-                                    Cardiology Department
-                                </h2>
-                                <p class="department-cart__text">
-                                    Introduction. Cardiology is the study heart conditions. The Consultant with whom you have an appointment is a specialist.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="all-departments__advertisement">
-            <div class="carousel__wrapper">
-                <div class="carousel--none" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "groupCells": 1, "pageDots": false}'>
-                    <div class="carousel__cell carousel__cell--store">
-                        <a href="" class="carousel__store-link" >
-                            <img src="./assets/images/1.png" alt="" class="carousel__store-img">
-                        </a>
-                    </div>
-                    <div class="carousel__cell carousel__cell--store">
-                        <a href="" class="carousel__store-link" >
-                            <img src="./assets/images/2.png" alt="" class="carousel__store-img">
-                        </a>
-                    </div>
-                    <div class="carousel__cell carousel__cell--store">
-                        <a href="" class="carousel__store-link" >
-                            <img src="./assets/images/3.png" alt="" class="carousel__store-img">
-                        </a>
-                    </div>
-                    <div class="carousel__cell carousel__cell--store">
-                        <a href="" class="carousel__store-link" >
-                            <img src="./assets/images/4.png" alt="" class="carousel__store-img">
-                        </a>
-                    </div>
-                    <div class="carousel__cell carousel__cell--store">
-                        <a href="" class="carousel__store-link" >
-                            <img src="./assets/images/5.png" alt="" class="carousel__store-img">
-                        </a>
-                    </div>
-                    <div class="carousel__cell carousel__cell--store">
-                        <a href="" class="carousel__store-link" >
-                            <img src="./assets/images/3.png" alt="" class="carousel__store-img">
-                        </a>
-                    </div>
-                </div>
-            </div>
-    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/flickity/flickity.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>

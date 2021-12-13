@@ -89,7 +89,7 @@ function myFunction() {
 
 //timetable
 const timetableDatas =  document.querySelectorAll(".timetable__data");
-timetableDatas.forEach(function(item){
+timetableDatas?.forEach(function(item){
   item.addEventListener("mouseover",function(e){
     const next = item.querySelector(".timetable__dropdown");
     next.classList.remove("d-none");
@@ -138,15 +138,100 @@ const appointmentModal = document.querySelector(".appointment-modal__wrapper");
 const appointmentModalCloseBtn = document.querySelector(".appointment-modal__form-close");
 const appointmentModalOpenBtn = document.querySelector(".makeAppointmentModal");
 
-appointmentModalCloseBtn.addEventListener("click",function(e){
+appointmentModalCloseBtn?.addEventListener("click",function(e){
   e.preventDefault();
   e.stopPropagation();
   appointmentModal.style.opacity="0";
   appointmentModal.style.visibility="hidden";
 })
-appointmentModalOpenBtn.addEventListener("click",function(e){
+appointmentModalOpenBtn?.addEventListener("click",function(e){
   e.preventDefault();
   e.stopPropagation();
   appointmentModal.style.opacity="1";
   appointmentModal.style.visibility="visible";
+})
+
+
+//blog-filter
+const blogCategories = document.querySelectorAll(".blog__categories a");
+blogCategories?.forEach(function(item){
+  item.addEventListener("click",function(e){
+    blogCategories?.forEach(function(blog){
+      blog.style.color = "#22252C";
+      blog.style.borderBottom = "none";
+    });
+    item.style.color = "#1370b5";
+    item.style.borderBottom = "2px solid #1370b5";
+  })
+})
+
+
+//blog category filter
+
+  var $filters = $('[data-filter]'),
+    $boxes = $('[data-target]');
+
+  $filters.on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    
+    $filters.removeClass('active');
+    $this.addClass('active');
+
+    var $filterBoxes = $this.attr('data-filter');
+
+    if ($filterBoxes == 'all') {
+      $boxes.removeClass('is-animated')
+        .fadeOut().promise().done(function() {
+          $boxes.addClass('is-animated').fadeIn();
+        });
+    } else {
+      $boxes.removeClass('is-animated')
+        .fadeOut().promise().done(function() {
+          $boxes.filter('[data-target = "' + $filterBoxes + '"]')
+            .addClass('is-animated').fadeIn();
+        });
+    }
+  });
+
+
+  //loading
+
+  function onReady(callback) {
+    var intervalId = window.setInterval(function() {
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }, 1000);
+  }
+  
+  function setVisible(selector, visible) {
+    document.querySelector(selector).style.display = visible ? 'block' : 'none';
+  }
+  
+  onReady(function() {
+    setVisible('.page', true);
+    setVisible('#loading', false);
+  });
+
+
+  //peofile-dropdown
+const profileDropdownTitle = document.querySelector(".header__user-side-profile");
+const infoDropdown = document.querySelector(".header__user-side-info");
+const profileDropdown = document.querySelector(".header__user-side-dropdown");
+
+profileDropdownTitle?.addEventListener("mouseover",function(e){
+  infoDropdown.style.opacity ="1";
+  infoDropdown.style.width ="150px";
+  infoDropdown.style.paddingRight ="55px";
+})
+profileDropdownTitle?.addEventListener("mouseout",function(e){
+  infoDropdown.style.opacity ="0";
+  infoDropdown.style.width ="0";
+  infoDropdown.style.paddingRight ="0%";
+  profileDropdown.classList.add("visibility");
+})
+profileDropdownTitle?.addEventListener("click",function(e){
+  profileDropdown.classList.toggle("visibility");
 })

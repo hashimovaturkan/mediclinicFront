@@ -1,0 +1,194 @@
+.department{
+    position: relative;
+    padding: 120px 0px 70px;
+    padding-bottom: 0;
+    &__main{
+        background-image: url('../images/department-parallax-img.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 26rem;
+    }
+    &__categories{
+        position: relative;
+        margin-bottom: 50px;
+    }
+    &__list{
+        position: relative;
+        margin-bottom: 50px;
+        background-color: #fcfcfc;
+        border: 10px solid #ffffff;
+        box-shadow: 0 0px 20px rgba(0, 0, 0 , 0.1%);
+        & li{
+            position: relative;
+            border: 1px solid #e7e7e7;
+            border-bottom: 0;
+            z-index: 9;
+            &:hover a{
+                background-color: $blue-v3;
+                color: $white;
+            }
+            &:hover a::before{
+                color: $white;
+            }
+            & a{
+                font-size: 16px;
+                font-weight: 500;
+                color: #222222;
+                line-height: 30px;
+                padding: 10px 25px;
+                display: block;
+                padding-left: 38px;
+                overflow: hidden;
+                -webkit-transition: all 300ms ease;
+            }
+            & a::before{
+                position: absolute;
+                left: 20px;
+                top: 10px;
+                font-size: 7px;
+                line-height: 30px;
+                color: #222222;
+                font-weight: 900;
+                content: "\f178";
+                font-family: "Flaticon";
+                -webkit-transition: all 300ms ease;
+            }
+        }
+    }
+
+    &__brochures-box{
+        position: relative;
+        margin-bottom: 50px;
+    }
+    &__brochures{
+        position: relative;
+        background-color: #fcfcfc;
+        border: 10px solid #ffffff;
+        box-shadow: 0 0 20px rgba(0, 0, 0 , 0.1%);
+        padding: 25px 20px 20px;
+        & h4{
+            display: block;
+            font-size: 21px;
+            line-height: 1.2em;
+            color: #222222;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        & div{
+            font-size: 15px;
+            line-height: 23px;
+            color: #222222;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__help{
+        position: relative;
+        background-size: cover;
+        padding: 30px 20px;
+        background-color: #fcfcfc;
+        border: 10px solid #ffffff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0 , 0.1%);
+        & span{
+            position: relative;
+            display: block;
+            font-size: 14px;
+            line-height: 20px;
+            color: #222222;
+            margin-bottom: 10px;
+        }
+        & h4{
+            position: relative;
+            color: #222222;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.2em;
+            margin-bottom: 15px;
+        }
+        & p{
+            position: relative;
+            color: #222222;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+    }
+    &__main-content{
+        margin-bottom: 50px;
+        position: relative;
+        padding-right: 20px;
+    }
+    &__img{
+        position: relative;
+        margin: 0 -5px;
+        & img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__content{
+        position: relative;
+        padding: 20px 0 0;
+        & p{
+            position: relative;
+            display: block;
+            font-size: 16px;
+            line-height: 26px;
+            color: #777777;
+            font-weight: 400;
+            margin-bottom: 26px;
+        }
+        & .row div{
+            position: relative;
+            margin-bottom: 35px;
+            & img{
+                display: block;
+                width: 100%;
+            }
+        }
+        & ul{
+            position: relative;
+            display: block;
+            margin-bottom: 20px;
+            & li{
+                position: relative;
+                font-weight: 400;
+                padding-left: 25px;
+                margin-bottom: 5px;
+                &::before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-family: "Flaticon";
+                    content: "\f150";
+                    color: #1370b5;
+                    font-weight: 900;
+                    font-size: 14px;
+                }
+            }
+        }
+        & h3{
+            position: relative;
+            display: block;
+            font-size: 24px;
+            line-height: 1.2em;
+            color: #343a40;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+    &__title{
+        position: relative;
+        margin-bottom: 30px;
+        & h2{
+            position: relative;
+            display: block;
+            font-size: 34px;
+            line-height: 1.2em;
+            color: #343a40;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    }
+}

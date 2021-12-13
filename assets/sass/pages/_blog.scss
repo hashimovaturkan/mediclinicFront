@@ -1,0 +1,54 @@
+.blog{
+    &__main{
+        background-image: url('../images/blog-parallax-1.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 31rem;
+    }
+    &__categories{
+        padding-top: 8rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #333;
+        border-top: 1px solid #e1e1e1;
+        @include flexbox(center);
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+        & li{
+            margin-right: 2rem;
+            margin-left: 2rem;
+            padding: 0;
+            margin-right: 0.8rem;
+            line-height: 2.143;
+            border-bottom: 2px solid transparent;
+            & a{
+                border-width: 2px;
+                letter-spacing: 0;
+                border-bottom: 1px solid transparent;
+                transition: color .3s, border-color .3s;
+                display: inline-block;
+                position: relative;
+                padding: 0.5rem 0;
+                font-size: 1.4rem;
+                letter-spacing: -.01em;
+                line-height: 1;
+                color: $black-dark-mode-v2;
+                &:hover{
+                    color:$blue-v3;
+                    border-bottom: 2px solid $blue-v3;
+                }
+                
+            }
+            & span{
+                margin-left: 0.8rem;
+                color: #aaa;
+            }
+
+        }
+        & li:not(:last-child){
+            margin-right: 1.8rem;
+        }
+    }
+}
+

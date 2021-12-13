@@ -15,618 +15,656 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="appointment-modal__wrapper">
-        <div class="appointment-modal">
-            <div class="appointment-modal__form-wrapper">
-                <div class="appointment-modal__title-box">
-                    <h4>Make an Appointment</h4>
-                    <div class="appointment-modal__title-text">
-                        We provide the most full medical services, so every person could have the <br>
-                        oportunity to receive qualitative medical help.
+    <div id="loading"></div>
+    <div class="page">
+        <div class="appointment-modal__wrapper">
+            <div class="appointment-modal">
+                <div class="appointment-modal__form-wrapper">
+                    <div class="appointment-modal__title-box">
+                        <h4>Make an Appointment</h4>
+                        <div class="appointment-modal__title-text">
+                            We provide the most full medical services, so every person could have the <br>
+                            oportunity to receive qualitative medical help.
+                        </div>
+                    </div>
+                    <form action="" class="appointment-modal__form">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="text" class="appointment-modal__input" placeholder="Your Name">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="tel" class="appointment-modal__input" placeholder="Your Phone">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="email" class="appointment-modal__input" placeholder="Your E-mail">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <select class="appointment-modal__input appointment-modal__input--select">
+                                    <option value="default" selected="" disabled="">Select Departments</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Urology">Urology</option>
+                                    <option value="Gynecological">Gynecological</option>
+                                    <option value="Pediatrical">Pediatrical</option>
+                                    <option value="Laboratory">Laboratory</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="date" class="appointment-modal__input" placeholder="Select Date">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <select class="appointment-modal__input appointment-modal__input--select">
+                                        <option value="" selected="" disabled="" style="display: none;">Select Time</option>
+                                        <option value="" data-value="default" disabled="" style="display: none;">Please select a department</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Cardiology" style="display: block;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Cardiology" style="display: block;">12:00AM - 02:00AM</option>
+                                        <option value="02:00PM - 04:00PM" data-value="Neurology" style="display: none;">02:00PM - 04:00PM</option>
+                                        <option value="04:00PM - 06:00PM" data-value="Neurology" style="display: none;">04:00PM - 06:00PM</option>
+                                        <option value="06:00PM - 08:00PM" data-value="Urology" style="display: none;">06:00PM - 08:00PM</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Urology" style="display: none;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Gynecological" style="display: none;">12:00AM - 02:00AM</option>
+                                        <option value="02:00PM - 04:00PM" data-value="Gynecological" style="display: none;">02:00PM - 04:00PM</option>
+                                        <option value="04:00PM - 06:00PM" data-value="Pediatrical" style="display: none;">04:00PM - 06:00PM</option>
+                                        <option value="06:00PM - 08:00PM" data-value="Pediatrical" style="display: none;">06:00PM - 08:00PM</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Laboratory" style="display: none;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Laboratory" style="display: none;">12:00AM - 02:00AM</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                                <textarea type="date" class="appointment-modal__input appointment-modal__input--textarea" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                                <a href="#" class="btn btn--black">Submit now</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="appointment-modal__form-close"></a>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header__top">
+                <div class="custom-container">
+                    <div class="header__top-inner">
+                        <a href="./index.html" class="header__top-logo">
+                            <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
+                        </a>
+                        <div class="header__top-main">
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <a target="_self" href="tel:+1258888455">
+                                        <i class="fa fa-phone header__info-fa"></i>
+                                    </a>
+                                </div>
+                                <div class="header__info-text">
+                                    <a target="_self" class="header__info-first" href="tel:+1258888455">
+                                        + (123) 1800-567-8990
+                                    </a>
+                                    <span>
+                                        + (123) 1800-453-1546
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <i class="fa fa-clock-o header__info-fa"></i>
+                                </div>
+                                <div class="header__info-text">
+                                    <span class="header__info-first">
+                                        Mon - Fri: 9:00AM - 5:00PM
+                                    </span>
+                                    <span>
+                                        Sat - Sun: Closed
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <a target="_self" href="tel:+1258888455">
+                                        <i class="fa fa-envelope header__info-fa"></i>
+                                    </a>
+                                </div>
+                                <div class="header__info-text">
+                                    <a target="_self" class="header__info-first" href="mailto:mediclinic@qodeinteractive.com">
+                                        mediclinic@qodeinteractive.com
+                                    </a>
+                                    <span>
+                                        clinic@qodeinteractive.com
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <form action="" class="appointment-modal__form">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="text" class="appointment-modal__input" placeholder="Your Name">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="tel" class="appointment-modal__input" placeholder="Your Phone">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="email" class="appointment-modal__input" placeholder="Your E-mail">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <select class="appointment-modal__input appointment-modal__input--select">
-                                <option value="default" selected="" disabled="">Select Departments</option>
-                                <option value="Cardiology">Cardiology</option>
-                                <option value="Neurology">Neurology</option>
-                                <option value="Urology">Urology</option>
-                                <option value="Gynecological">Gynecological</option>
-                                <option value="Pediatrical">Pediatrical</option>
-                                <option value="Laboratory">Laboratory</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="date" class="appointment-modal__input" placeholder="Select Date">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <select class="appointment-modal__input appointment-modal__input--select">
-                                    <option value="" selected="" disabled="" style="display: none;">Select Time</option>
-                                    <option value="" data-value="default" disabled="" style="display: none;">Please select a department</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Cardiology" style="display: block;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Cardiology" style="display: block;">12:00AM - 02:00AM</option>
-                                    <option value="02:00PM - 04:00PM" data-value="Neurology" style="display: none;">02:00PM - 04:00PM</option>
-                                    <option value="04:00PM - 06:00PM" data-value="Neurology" style="display: none;">04:00PM - 06:00PM</option>
-                                    <option value="06:00PM - 08:00PM" data-value="Urology" style="display: none;">06:00PM - 08:00PM</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Urology" style="display: none;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Gynecological" style="display: none;">12:00AM - 02:00AM</option>
-                                    <option value="02:00PM - 04:00PM" data-value="Gynecological" style="display: none;">02:00PM - 04:00PM</option>
-                                    <option value="04:00PM - 06:00PM" data-value="Pediatrical" style="display: none;">04:00PM - 06:00PM</option>
-                                    <option value="06:00PM - 08:00PM" data-value="Pediatrical" style="display: none;">06:00PM - 08:00PM</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Laboratory" style="display: none;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Laboratory" style="display: none;">12:00AM - 02:00AM</option>
+            </div>
+            <div class="header__bottom">
+                <div class="custom-container">
+                    <div class="header__bottom-wrapper">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a href="./about.html" class="menu__list-link">Home</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Doctors</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our doctors</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Timetable</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Departments</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">All Departments</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cardiology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Neurology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Urology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Gynecological</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Pediatrical</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Laboratory</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Blogs</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Shop</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">My Account</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cart</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Checkout</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">About us</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Who We Are</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clinic</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Services</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Process</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clients</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">FAQ</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Working Hours</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Contact us</a>
+                                </li>
+                                <li class="menu__list-elem"></li>
+                            </ul>
+                        </nav>
+                        <div class="header__user-side">
+                            <a href="#" class="btn btn--primary makeAppointmentModal">
+                                Make an Appointment
+                            </a>
+                            <!-- <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="header__user-side-circle">
+                                    <span class="header__user-side-count">2</span>
+                                </span>
                                 
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
-                            <textarea type="date" class="appointment-modal__input appointment-modal__input--textarea" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
-                            <a href="#" class="btn btn--black">Submit now</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <a href="#" class="appointment-modal__form-close"></a>
-        </div>
-    </div>
-    <header class="header">
-        <div class="header__top">
-            <div class="custom-container">
-                <div class="header__top-inner">
-                    <a href="./index.html" class="header__top-logo">
-                        <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
-                    </a>
-                    <div class="header__top-main">
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <a target="_self" href="tel:+1258888455">
-                                    <i class="fa fa-phone header__info-fa"></i>
-                                </a>
-                            </div>
-                            <div class="header__info-text">
-                                <a target="_self" class="header__info-first" href="tel:+1258888455">
-                                    + (123) 1800-567-8990
-                                </a>
-                                <span>
-                                    + (123) 1800-453-1546
+                            </a> -->
+                            <div class="header__user-side-icon">
+                                <span class="header__user-side-profile">
+                                    <img src="./assets/images/notfoundprofile.png" class="header__user-side-img" alt="">
+                                    <span class="header__user-side-info">
+                                        <span class="header__user-side-name">Bilal Ck</span>
+                                        <span class="header__user-side-mail">bilal@gmail.com</span>
+                                    </span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="10px">    <path d="M15,23c-0.256,0-0.512-0.098-0.707-0.293l-10-10c-0.286-0.286-0.372-0.716-0.217-1.09C4.23,11.243,4.596,11,5,11h20 c0.404,0,0.77,0.243,0.924,0.617c0.155,0.374,0.069,0.804-0.217,1.09l-10,10C15.512,22.902,15.256,23,15,23z"></path></svg>
                                 </span>
+                                <ul class="header__user-side-dropdown visibility">
+                                    <li><a href="#">
+                                        <svg fill="#646464" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                width="24px" height="45.532px" viewBox="0 0 45.532 45.532" style="enable-background:new 0 0 45.532 45.532;"
+                                                xml:space="preserve">
+                                            <g>
+                                                <path d="M22.766,0.001C10.194,0.001,0,10.193,0,22.766s10.193,22.765,22.766,22.765c12.574,0,22.766-10.192,22.766-22.765
+                                                    S35.34,0.001,22.766,0.001z M22.766,6.808c4.16,0,7.531,3.372,7.531,7.53c0,4.159-3.371,7.53-7.531,7.53
+                                                    c-4.158,0-7.529-3.371-7.529-7.53C15.237,10.18,18.608,6.808,22.766,6.808z M22.761,39.579c-4.149,0-7.949-1.511-10.88-4.012
+                                                    c-0.714-0.609-1.126-1.502-1.126-2.439c0-4.217,3.413-7.592,7.631-7.592h8.762c4.219,0,7.619,3.375,7.619,7.592
+                                                    c0,0.938-0.41,1.829-1.125,2.438C30.712,38.068,26.911,39.579,22.761,39.579z"/>
+                                            </g>
+                                            </svg>
+                                        <span>Profile</span>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <svg fill="#646464" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 9.6660156 2 L 9.1757812 4.5234375 C 8.3516137 4.8342536 7.5947862 5.2699307 6.9316406 5.8144531 L 4.5078125 4.9785156 L 2.171875 9.0214844 L 4.1132812 10.708984 C 4.0386488 11.16721 4 11.591845 4 12 C 4 12.408768 4.0398071 12.832626 4.1132812 13.291016 L 4.1132812 13.292969 L 2.171875 14.980469 L 4.5078125 19.021484 L 6.9296875 18.1875 C 7.5928951 18.732319 8.3514346 19.165567 9.1757812 19.476562 L 9.6660156 22 L 14.333984 22 L 14.824219 19.476562 C 15.648925 19.165543 16.404903 18.73057 17.068359 18.185547 L 19.492188 19.021484 L 21.826172 14.980469 L 19.886719 13.291016 C 19.961351 12.83279 20 12.408155 20 12 C 20 11.592457 19.96113 11.168374 19.886719 10.710938 L 19.886719 10.708984 L 21.828125 9.0195312 L 19.492188 4.9785156 L 17.070312 5.8125 C 16.407106 5.2676813 15.648565 4.8344327 14.824219 4.5234375 L 14.333984 2 L 9.6660156 2 z M 11.314453 4 L 12.685547 4 L 13.074219 6 L 14.117188 6.3945312 C 14.745852 6.63147 15.310672 6.9567546 15.800781 7.359375 L 16.664062 8.0664062 L 18.585938 7.40625 L 19.271484 8.5917969 L 17.736328 9.9277344 L 17.912109 11.027344 L 17.912109 11.029297 C 17.973258 11.404235 18 11.718768 18 12 C 18 12.281232 17.973259 12.595718 17.912109 12.970703 L 17.734375 14.070312 L 19.269531 15.40625 L 18.583984 16.59375 L 16.664062 15.931641 L 15.798828 16.640625 C 15.308719 17.043245 14.745852 17.36853 14.117188 17.605469 L 14.115234 17.605469 L 13.072266 18 L 12.683594 20 L 11.314453 20 L 10.925781 18 L 9.8828125 17.605469 C 9.2541467 17.36853 8.6893282 17.043245 8.1992188 16.640625 L 7.3359375 15.933594 L 5.4140625 16.59375 L 4.7285156 15.408203 L 6.265625 14.070312 L 6.0878906 12.974609 L 6.0878906 12.972656 C 6.0276183 12.596088 6 12.280673 6 12 C 6 11.718768 6.026742 11.404282 6.0878906 11.029297 L 6.265625 9.9296875 L 4.7285156 8.59375 L 5.4140625 7.40625 L 7.3359375 8.0683594 L 8.1992188 7.359375 C 8.6893282 6.9567546 9.2541467 6.6314701 9.8828125 6.3945312 L 10.925781 6 L 11.314453 4 z M 12 8 C 9.8034768 8 8 9.8034768 8 12 C 8 14.196523 9.8034768 16 12 16 C 14.196523 16 16 14.196523 16 12 C 16 9.8034768 14.196523 8 12 8 z M 12 10 C 13.111477 10 14 10.888523 14 12 C 14 13.111477 13.111477 14 12 14 C 10.888523 14 10 13.111477 10 12 C 10 10.888523 10.888523 10 12 10 z"/></svg>
+                                        <span>Setting</span>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <svg fill="#646464" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 9.408l2.963 2.592-2.963 2.592v-1.592h-8v-2h8v-1.592zm-2-4.408v4h-8v6h8v4l8-7-8-7zm6-3c-1.787 0-3.46.474-4.911 1.295l.228.2 1.396 1.221c1.004-.456 2.114-.716 3.287-.716 4.411 0 8 3.589 8 8s-3.589 8-8 8c-1.173 0-2.283-.26-3.288-.715l-1.396 1.221-.228.2c1.452.82 3.125 1.294 4.912 1.294 5.522 0 10-4.477 10-10s-4.478-10-10-10z"/></svg>                                    
+                                        <span>Log out</span>
+                                    </a></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <i class="fa fa-clock-o header__info-fa"></i>
-                            </div>
-                            <div class="header__info-text">
-                                <span class="header__info-first">
-                                    Mon - Fri: 9:00AM - 5:00PM
-                                </span>
-                                <span>
-                                    Sat - Sun: Closed
-                                </span>
-                            </div>
-                        </div>
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <a target="_self" href="tel:+1258888455">
-                                    <i class="fa fa-envelope header__info-fa"></i>
-                                </a>
-                            </div>
-                            <div class="header__info-text">
-                                <a target="_self" class="header__info-first" href="mailto:mediclinic@qodeinteractive.com">
-                                    mediclinic@qodeinteractive.com
-                                </a>
-                                <span>
-                                    clinic@qodeinteractive.com
-                                </span>
-                            </div>
+                            <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-search"></i>
+                            </a>
+                            <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-bars"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="header__bottom">
-            <div class="custom-container">
-                <div class="header__bottom-wrapper">
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__list-item">
-                                <a href="./about.html" class="menu__list-link">Home</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Doctors</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our doctors</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Timetable</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Departments</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">All Departments</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cardiology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Neurology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Urology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Gynecological</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Pediatrical</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Laboratory</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Blogs</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Shop</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">My Account</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cart</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Checkout</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">About us</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Who We Are</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clinic</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Services</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Process</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clients</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">FAQ</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Working Hours</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Contact us</a>
-                            </li>
-                            <li class="menu__list-elem"></li>
-                        </ul>
-                    </nav>
-                    <div class="header__user-side">
-                        <a href="#" class="btn btn--primary makeAppointmentModal">
-                            Make an Appointment
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span class="header__user-side-circle">
-                                <span class="header__user-side-count">2</span>
-                            </span>
-                            
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="slider">
-        <div class="custom-container-fluid p-0">
-            <div class="carousel__wrapper">
-                <div class="carousel" data-flickity='{ "autoPlay": 4000, "wrapAround": true, "selectedAttraction": 0.05,"friction": 0.8, "pauseAutoPlayOnHover": true}'>
-                    <div class="carousel__cell"> 
-                        <img class="carousel__img" src="./assets/images/slider-3.jpg" alt="slider">
-                        <div class="carousel__content">
-                            <h1 class="carousel__text">Welcome to <div class="carousel__text--special">MediClinic</div></h1>
-                            <p class="carousel__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim explicabo tempore laborum doloremque minus asperiores repellendus? Placeat eligendi modi laboriosam.</p>
-                            <a href="" class="btn btn--bigger">Our Services</a>
+        </header>
+        <section class="slider">
+            <div class="custom-container-fluid p-0">
+                <div class="carousel__wrapper carousel__wrapper--pad">
+                    <div class="carousel" data-flickity='{ "autoPlay": 4000, "wrapAround": true, "selectedAttraction": 0.05,"friction": 0.8, "pauseAutoPlayOnHover": true}'>
+                        <div class="carousel__cell"> 
+                            <img class="carousel__img" src="./assets/images/slider-3.jpg" alt="slider">
+                            <div class="carousel__content">
+                                <h1 class="carousel__text">Welcome to <div class="carousel__text--special">MediClinic</div></h1>
+                                <p class="carousel__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim explicabo tempore laborum doloremque minus asperiores repellendus? Placeat eligendi modi laboriosam.</p>
+                                <a href="" class="btn btn--bigger">Our Services</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel__cell">
-                        <img class="carousel__img" src="./assets/images/slider-7.jpg" alt="slider">
-                        <div class="carousel__content">
-                            <h1 class="carousel__text carousel__text--dark">We take care our <div class="carousel__text--special">patients health</div></h1>
-                            <p class="carousel__desc carousel__desc--dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim explicabo tempore laborum doloremque minus asperiores repellendus? Placeat eligendi modi laboriosam.</p>
-                            <a href="" class="btn btn--bigger">Our Services</a>
-                        </div>
-                    </div>
-                    <div class="carousel__cell">
-                        <img class="carousel__img" src="./assets/images/slider-6.jpg" alt="slider">
-                        <div class="carousel__content">
-                            <h1 class="carousel__text carousel__text--dark">We take care our <div class="carousel__text--special">patients health</h1>
+                        <div class="carousel__cell">
+                            <img class="carousel__img" src="./assets/images/slider-7.jpg" alt="slider">
+                            <div class="carousel__content">
+                                <h1 class="carousel__text carousel__text--dark">We take care our <div class="carousel__text--special">patients health</div></h1>
                                 <p class="carousel__desc carousel__desc--dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim explicabo tempore laborum doloremque minus asperiores repellendus? Placeat eligendi modi laboriosam.</p>
                                 <a href="" class="btn btn--bigger">Our Services</a>
+                            </div>
+                        </div>
+                        <div class="carousel__cell">
+                            <img class="carousel__img" src="./assets/images/slider-6.jpg" alt="slider">
+                            <div class="carousel__content">
+                                <h1 class="carousel__text carousel__text--dark">We take care our <div class="carousel__text--special">patients health</h1>
+                                    <p class="carousel__desc carousel__desc--dark">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim explicabo tempore laborum doloremque minus asperiores repellendus? Placeat eligendi modi laboriosam.</p>
+                                    <a href="" class="btn btn--bigger">Our Services</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="our-medical my-8 mt-5">
-        <div class="custom-container">
-            <div class="row">
-                <div class="col-12 col-md-12 col-lg-6 col-sm-12 col-xl-6">
-                    <div class="our-medical__images">
-                        <img src="./assets/images/image-1.png" alt="img-1">
-                        <img class="our-medical__over-img our-medical__over-img--1" src="./assets/images/image-2.png" alt="img-1">
-                        <img class="our-medical__over-img our-medical__over-img--2" src="./assets/images/image-3.png" alt="img-1">
+        </section>
+        <section class="our-medical my-8 mt-5">
+            <div class="custom-container">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-6 col-sm-12 col-xl-6">
+                        <div class="our-medical__images">
+                            <img src="./assets/images/image-1.png" alt="img-1">
+                            <img class="our-medical__over-img our-medical__over-img--1" src="./assets/images/image-2.png" alt="img-1">
+                            <img class="our-medical__over-img our-medical__over-img--2" src="./assets/images/image-3.png" alt="img-1">
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-6 col-sm-12 col-xl-6">
-                    <div class="our-medical__content">
-                        <h3 class="subtitle">Our Medical</h3>
-                        <h2 class="title">
-                            We're setting Standards in Research what's more, Clinical Care.
-                        </h2>
-                        <span>
-                            <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
-                        </span>
-                        <p class="our-medical__content-text our-medical__content-text--over">
-                            We provide the most full medical services, so every person could have the pportunity o receive qualitative medical help.
-                        </p>
-                        <p class="our-medical__content-text">
-                            Our Clinic has grown to provide a world class facility for the treatment of tooth loss, dental cosmetics and bore advanced restorative dentistry. We are among the most qualified implant providers in the AUS with over 30 years of uality training and experience.
-                        </p>
-                        <img class="our-medical__signature" src="./assets/images/signature.png" alt="signature">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="our-services my-8">
-        <div class="custom-container">
-            <h3 class="subtitle subtitle--center">OUR SERVICES</h3>
-            <h2 class="title title--center">
-                We Care Our Patients.
-            </h2>
-            <div class="text-center">
-                <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
-                    <div class="cart">
-                        <span class="icon flaticon-heartbeat cart__img"></span>
-                        <h3 class="cart__title">Health Check</h3>
-                        <p class="cart__content">
-                            We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
-                    <div class="cart">
-                        <span class="icon flaticon-surgery-room cart__img"></span>
-                        <h3 class="cart__title">Operation Theater</h3>
-                        <p class="cart__content">
-                            We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
-                    <div class="cart">
-                        <span class="icon flaticon-transport cart__img"></span>
-                        <h3 class="cart__title">Pharmacy Support</h3>
-                        <p class="cart__content">
-                            We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
-                    <div class="cart">
-                        <span class="icon flaticon-lab cart__img"></span>
-                        <h3 class="cart__title">Ambulance Car</h3>
-                        <p class="cart__content">
-                            We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
-                    <div class="cart">
-                        <span class="icon flaticon-first-aid cart__img"></span>
-                        <h3 class="cart__title">Lat Tests</h3>
-                        <p class="cart__content">
-                            We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
-                    <div class="cart">
-                        <span class="icon flaticon-heartbeat cart__img"></span>
-                        <h3 class="cart__title">Intensive Care</h3>
-                        <p class="cart__content">
-                            We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section class="our-doctors my-8">
-        <div class="custom-container">
-            <h3 class="subtitle subtitle--center">Our Doctor</h3>
-            <h2 class="title title--center">
-                Our Dedicated Doctors Team
-            </h2>
-            <div class="text-center">
-                <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                    <div class="team-cart">
-                        <div class="team-cart__image-wrapper">
-                            <img class="team-cart__image" src="./assets/images/team-member-1.jpg" alt="img1">
-                            <img class="team-cart__icon--center" src="./assets/images/team-custom-icon-1.png" alt="icon">
-                            <span class="team-cart__icon-wrapper">
-                                <img class="team-cart__icon" src="./assets/images/team-custom-icon-1.png" alt="icon">
+                    <div class="col-12 col-md-12 col-lg-6 col-sm-12 col-xl-6">
+                        <div class="our-medical__content">
+                            <h3 class="subtitle">Our Medical</h3>
+                            <h2 class="title">
+                                We're setting Standards in Research what's more, Clinical Care.
+                            </h2>
+                            <span>
+                                <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
                             </span>
+                            <p class="our-medical__content-text our-medical__content-text--over">
+                                We provide the most full medical services, so every person could have the pportunity o receive qualitative medical help.
+                            </p>
+                            <p class="our-medical__content-text">
+                                Our Clinic has grown to provide a world class facility for the treatment of tooth loss, dental cosmetics and bore advanced restorative dentistry. We are among the most qualified implant providers in the AUS with over 30 years of uality training and experience.
+                            </p>
+                            <img class="our-medical__signature" src="./assets/images/signature.png" alt="signature">
                         </div>
-                        <h5 class="text-center my-3"><a href="#" class="team-cart__name">Angela Adams</a></h5>
-                        <h6 class="team-cart__work">Cardiac Surgery</h6>
-                        <p class="team-cart__desc">
-                            Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis
-                        </p>
-                        <ul class="team-cart__media">
-                            <li class="social-btn social-btn--instagram">
-                                <a href="https://www.instagram.com/thashimova">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--mail">
-                                <a href="mailto:turkansh@code.edu.az">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-envelope" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--tel">
-                                <a href="tel:(+994)775710218">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
-                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--linkedin"><a href="#">
-                                <a href="https://linkedin.com/in/turkan-hashimova">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-        
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                    <div class="team-cart">
-                        <div class="team-cart__image-wrapper">
-                            <img class="team-cart__image" src="./assets/images/team-member-2.jpg" alt="img2">
-                            <img class="team-cart__icon--center" src="./assets/images/team-custom-icon-2.png" alt="icon">
-                            <span class="team-cart__icon-wrapper">
-                                <img class="team-cart__icon" src="./assets/images/team-custom-icon-2.png" alt="icon">
-                            </span>
-                        </div>
-                        <h5 class="text-center my-3"><a href="#" class="team-cart__name">Jordan Kelley</a></h5>
-                        <h6 class="team-cart__work">Cardiology</h6>
-                        <p class="team-cart__desc">
-                            Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis
-                        </p>
-                        <ul class="team-cart__media">
-                            <li class="social-btn social-btn--instagram">
-                                <a href="https://www.instagram.com/thashimova">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--mail">
-                                <a href="mailto:turkansh@code.edu.az">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-envelope" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--tel">
-                                <a href="tel:(+994)775710218">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
-                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--linkedin"><a href="#">
-                                <a href="https://linkedin.com/in/turkan-hashimova">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-        
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                    <div class="team-cart">
-                        <div class="team-cart__image-wrapper">
-                            <img class="team-cart__image" src="./assets/images/team-member-3.jpg" alt="img3">
-                            <img class="team-cart__icon--center" src="./assets/images/team-custom-icon-3.png" alt="icon">
-                            <span class="team-cart__icon-wrapper">
-                                <img class="team-cart__icon" src="./assets/images/team-custom-icon-3.png" alt="icon">
-                            </span>
-                        </div>
-                        <h5 class="text-center my-3"><a href="#" class="team-cart__name">Nicole Dixon</a></h5>
-                        <h6 class="team-cart__work">Gynecology</h6>
-                        <p class="team-cart__desc">
-                            Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis
-                        </p>
-                        <ul class="team-cart__media">
-                            <li class="social-btn social-btn--instagram">
-                                <a href="https://www.instagram.com/thashimova">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--mail">
-                                <a href="mailto:turkansh@code.edu.az">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-envelope" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--tel">
-                                <a href="tel:(+994)775710218">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
-                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--linkedin"><a href="#">
-                                <a href="https://linkedin.com/in/turkan-hashimova">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-        
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                    <div class="team-cart">
-                        <div class="team-cart__image-wrapper">
-                            <img class="team-cart__image" src="./assets/images/team-member-4.jpg" alt="img4">
-                            <img class="team-cart__icon--center" src="./assets/images/team-custom-icon-4.png" alt="icon">
-                            <span class="team-cart__icon-wrapper">
-                                <img class="team-cart__icon" src="./assets/images/team-custom-icon-4.png" alt="icon">
-                            </span>
-                        </div>
-                        <h5 class="text-center my-3"><a href="#" class="team-cart__name">Steven Elliott</a></h5>
-                        <h6 class="team-cart__work">Dietetics</h6>
-                        <p class="team-cart__desc">
-                            Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis
-                        </p>
-                        <ul class="team-cart__media">
-                            <li class="social-btn social-btn--instagram">
-                                <a href="https://www.instagram.com/thashimova">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--mail">
-                                <a href="mailto:turkansh@code.edu.az">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-envelope" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--tel">
-                                <a href="tel:(+994)775710218">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
-                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-btn social-btn--linkedin"><a href="#">
-                                <a href="https://linkedin.com/in/turkan-hashimova">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-        
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="appointment">
-        <div class="custom-container">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment__make-wrapper">
-                    <div class="appointment__make">
-                        <span class="appointment__subtitle">NEED A DOCTOR FOR CHECK-UP?</span>
-                        <h2 class="appointment__title">Just Make an Appointment and You’re Done!</h2>
-                        <div class="appointment__number">
-                            Get Your Quote or Call:
-                            <strong class="appointment__phone">(0080) 123-453-789</strong>
+        </section>
+        <section class="our-services my-8">
+            <div class="custom-container">
+                <h3 class="subtitle subtitle--center">OUR SERVICES</h3>
+                <h2 class="title title--center">
+                    We Care Our Patients.
+                </h2>
+                <div class="text-center">
+                    <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
+                        <div class="cart">
+                            <span class="icon flaticon-heartbeat cart__img"></span>
+                            <h3 class="cart__title">Health Check</h3>
+                            <p class="cart__content">
+                                We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
+                            </p>
                         </div>
-                        <a href="#" class="btn btn--bigger btn--black">
-                            Get an Appointment
-                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
+                        <div class="cart">
+                            <span class="icon flaticon-surgery-room cart__img"></span>
+                            <h3 class="cart__title">Operation Theater</h3>
+                            <p class="cart__content">
+                                We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
+                        <div class="cart">
+                            <span class="icon flaticon-transport cart__img"></span>
+                            <h3 class="cart__title">Pharmacy Support</h3>
+                            <p class="cart__content">
+                                We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
+                        <div class="cart">
+                            <span class="icon flaticon-lab cart__img"></span>
+                            <h3 class="cart__title">Ambulance Car</h3>
+                            <p class="cart__content">
+                                We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
+                        <div class="cart">
+                            <span class="icon flaticon-first-aid cart__img"></span>
+                            <h3 class="cart__title">Lat Tests</h3>
+                            <p class="cart__content">
+                                We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-sm-12 col-xl-4">
+                        <div class="cart">
+                            <span class="icon flaticon-heartbeat cart__img"></span>
+                            <h3 class="cart__title">Intensive Care</h3>
+                            <p class="cart__content">
+                                We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6">
-                    <figure class="appointment__image">
-                        <img src="./assets/images/image-4.png" alt="img4">
-                    </figure>
-                </div>
+    
             </div>
-            <div class="fact">
+        </section>
+        <section class="our-doctors my-8">
+            <div class="custom-container">
+                <h3 class="subtitle subtitle--center">Our Doctor</h3>
+                <h2 class="title title--center">
+                    Our Dedicated Doctors Team
+                </h2>
+                <div class="text-center">
+                    <svg viewBox="0 0 300.08 300.08" width="70px" ><path fill="#16426d" d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path></svg>
+                </div>
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                        <div class="fact__box">
-                            <div class="fact__count-box">
-                                <div class="fact__icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1370b5" class="mb-4 fact__svg" viewBox="0 0 50 50"><path d="M 25 2 C 12.308594 2 2 12.308594 2 25 C 2 37.691406 12.308594 48 25 48 C 37.691406 48 48 37.691406 48 25 C 48 12.308594 37.691406 2 25 2 Z M 25 4 C 36.609375 4 46 13.390625 46 25 C 46 36.609375 36.609375 46 25 46 C 13.390625 46 4 36.609375 4 25 C 4 13.390625 13.390625 4 25 4 Z M 25 7 C 22.800781 7 21 8.800781 21 11 C 21 13.199219 22.800781 15 25 15 C 27.199219 15 29 13.199219 29 11 C 29 8.800781 27.199219 7 25 7 Z M 25 9 C 26.117188 9 27 9.882813 27 11 C 27 12.117188 26.117188 13 25 13 C 23.882813 13 23 12.117188 23 11 C 23 9.882813 23.882813 9 25 9 Z M 12.8125 14.4375 C 11.796875 14.515625 10.867188 15.175781 10.53125 16.1875 C 10.085938 17.519531 10.804688 18.996094 12.125 19.46875 L 20 22.28125 L 20 28.875 L 17.5 38.90625 C 17.113281 40.460938 18.304688 42 19.90625 42 C 20.976563 42 21.945313 41.300781 22.28125 40.28125 L 25 32.125 L 27.71875 40.28125 C 28.054688 41.300781 29.023438 42 30.09375 42 C 31.695313 42 32.886719 40.460938 32.5 38.90625 L 30 28.875 L 30 22.28125 L 37.875 19.46875 C 39.195313 18.996094 39.914063 17.519531 39.46875 16.1875 C 39.019531 14.839844 37.503906 14.113281 36.15625 14.5625 L 28.875 17 L 21.125 17 L 13.84375 14.5625 C 13.507813 14.449219 13.152344 14.410156 12.8125 14.4375 Z M 12.9375 16.4375 C 13.015625 16.433594 13.105469 16.441406 13.1875 16.46875 L 20.6875 18.9375 L 20.84375 19 L 29.15625 19 L 29.3125 18.9375 L 36.8125 16.46875 C 37.136719 16.359375 37.453125 16.519531 37.5625 16.84375 C 37.667969 17.164063 37.503906 17.480469 37.1875 17.59375 L 28.65625 20.625 L 28 20.84375 L 28 29.125 L 30.5625 39.375 C 30.648438 39.714844 30.441406 40 30.09375 40 C 29.875 40 29.660156 39.863281 29.59375 39.65625 L 26.03125 29.03125 C 26.03125 29 26.03125 28.96875 26.03125 28.9375 C 26.070313 28.417969 25.703125 27.953125 25.1875 27.875 C 25.175781 27.875 25.167969 27.875 25.15625 27.875 C 25.105469 27.859375 25.054688 27.851563 25 27.84375 C 24.988281 27.84375 24.980469 27.84375 24.96875 27.84375 C 24.914063 27.851563 24.863281 27.859375 24.8125 27.875 C 24.757813 27.882813 24.707031 27.890625 24.65625 27.90625 C 24.203125 28.050781 23.917969 28.496094 23.96875 28.96875 L 20.40625 39.65625 C 20.339844 39.863281 20.125 40 19.90625 40 C 19.558594 40 19.351563 39.714844 19.4375 39.375 L 22 29.125 L 22 20.84375 L 21.34375 20.625 L 12.8125 17.59375 C 12.496094 17.480469 12.332031 17.164063 12.4375 16.84375 C 12.519531 16.601563 12.707031 16.453125 12.9375 16.4375 Z"></path></svg>
-                                </div>
-                                <h4 class="fact__title">Years of Experience</h4>
-                                <span class="fact__count">25</span>
+                        <div class="team-cart">
+                            <div class="team-cart__image-wrapper">
+                                <img class="team-cart__image" src="./assets/images/team-member-1.jpg" alt="img1">
+                                <img class="team-cart__icon--center" src="./assets/images/team-custom-icon-1.png" alt="icon">
+                                <span class="team-cart__icon-wrapper">
+                                    <img class="team-cart__icon" src="./assets/images/team-custom-icon-1.png" alt="icon">
+                                </span>
                             </div>
+                            <h5 class="text-center my-3"><a href="#" class="team-cart__name">Angela Adams</a></h5>
+                            <h6 class="team-cart__work">Cardiac Surgery</h6>
+                            <p class="team-cart__desc">
+                                Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis
+                            </p>
+                            <ul class="team-cart__media">
+                                <li class="social-btn social-btn--instagram">
+                                    <a href="https://www.instagram.com/thashimova">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--mail">
+                                    <a href="mailto:turkansh@code.edu.az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--tel">
+                                    <a href="tel:(+994)775710218">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--linkedin"><a href="#">
+                                    <a href="https://linkedin.com/in/turkan-hashimova">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+            
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                        <div class="fact__box">
-                            <div class="fact__count-box">
-                                <div class="fact__icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1370b5" class="mb-4 fact__svg" viewBox="0 0 32 32"><path d="M26.21 7.5h-6.49l-.55-1.64a2 2 0 0 0-1.88-1.36h-2.58a2 2 0 0 0-1.88 1.36l-.55 1.64H5.79A3.79 3.79 0 0 0 2 11.29v12.42a3.79 3.79 0 0 0 3.79 3.79h20.42A3.79 3.79 0 0 0 30 23.71V11.29a3.79 3.79 0 0 0-3.79-3.79zm-11.5-1h2.57l.33 1h-3.23zM28 23.71a1.79 1.79 0 0 1-1.79 1.79H5.79A1.79 1.79 0 0 1 4 23.71V11.29A1.79 1.79 0 0 1 5.79 9.5h20.42A1.79 1.79 0 0 1 28 11.29zM13 17.5a1 1 0 0 1-1 1h-1v1a1 1 0 0 1-2 0v-1H8a1 1 0 0 1 0-2h1v-1a1 1 0 0 1 2 0v1h1a1 1 0 0 1 1 1zm12-2a1 1 0 0 1-1 1h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 1 1zm-5 4a1 1 0 0 1-1 1h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1z" data-name="id card"/></svg>                                </div>
-                                <h4 class="fact__title">Medical Spesialities</h4>
-                                <span class="fact__count">470</span>
+                        <div class="team-cart">
+                            <div class="team-cart__image-wrapper">
+                                <img class="team-cart__image" src="./assets/images/team-member-2.jpg" alt="img2">
+                                <img class="team-cart__icon--center" src="./assets/images/team-custom-icon-2.png" alt="icon">
+                                <span class="team-cart__icon-wrapper">
+                                    <img class="team-cart__icon" src="./assets/images/team-custom-icon-2.png" alt="icon">
+                                </span>
                             </div>
+                            <h5 class="text-center my-3"><a href="#" class="team-cart__name">Jordan Kelley</a></h5>
+                            <h6 class="team-cart__work">Cardiology</h6>
+                            <p class="team-cart__desc">
+                                Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis
+                            </p>
+                            <ul class="team-cart__media">
+                                <li class="social-btn social-btn--instagram">
+                                    <a href="https://www.instagram.com/thashimova">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--mail">
+                                    <a href="mailto:turkansh@code.edu.az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--tel">
+                                    <a href="tel:(+994)775710218">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--linkedin"><a href="#">
+                                    <a href="https://linkedin.com/in/turkan-hashimova">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+            
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                        <div class="fact__box">
-                            <div class="fact__count-box">
-                                <div class="fact__icon">
-                                    <svg data-name="Layer 1" fill="#1370b5" class="mb-4 fact__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M61.748 70.68h-4.914v-4.914a1.749 1.749 0 0 0-1.75-1.75h-8.649a1.75 1.75 0 0 0-1.75 1.75v4.914h-4.913a1.75 1.75 0 0 0-1.75 1.75v8.648a1.75 1.75 0 0 0 1.75 1.75h4.913v4.913a1.75 1.75 0 0 0 1.75 1.75h8.649a1.749 1.749 0 0 0 1.75-1.75v-4.913h4.914a1.75 1.75 0 0 0 1.75-1.75V72.43a1.75 1.75 0 0 0-1.75-1.75zM60 79.328h-4.916a1.75 1.75 0 0 0-1.75 1.75v4.913h-5.149v-4.913a1.75 1.75 0 0 0-1.75-1.75h-4.913V74.18h4.913a1.751 1.751 0 0 0 1.75-1.75v-4.914h5.149v4.914a1.751 1.751 0 0 0 1.75 1.75H60z"/><path d="M97.694 93.58H82.223V45.986a8.531 8.531 0 0 0-6.712-8.3l-1.93-.414a5.014 5.014 0 0 1-3.945-4.872v-4.633h3.975a1.75 1.75 0 0 0 1.75-1.75V14.146a1.75 1.75 0 0 0-1.75-1.75h-45.7a1.751 1.751 0 0 0-1.75 1.75v11.871a1.751 1.751 0 0 0 1.75 1.75h3.975V32.4a5.013 5.013 0 0 1-3.944 4.877l-1.931.414a8.53 8.53 0 0 0-6.712 8.3v61.129a8.5 8.5 0 0 0 8.488 8.489h45.948a8.483 8.483 0 0 0 3.379-.712 10.919 10.919 0 0 0 3.847.708h16.733a11.01 11.01 0 0 0 0-22.02zM22.8 59.924h55.923v33.66H22.8zM29.658 15.9h42.2v8.371h-42.2zm-2.917 25.208 1.93-.413a8.529 8.529 0 0 0 6.712-8.3v-4.628h30.753V32.4a8.53 8.53 0 0 0 6.713 8.3l1.929.413a5.016 5.016 0 0 1 3.945 4.878v10.433H22.8V45.986a5.015 5.015 0 0 1 3.941-4.878zM22.8 107.115V97.084h50.134a10.942 10.942 0 0 0 0 15.02h-45.15a4.994 4.994 0 0 1-4.984-4.989zm50.655-2.525a7.528 7.528 0 0 1 7.51-7.51h6.622v15.02h-6.626a7.519 7.519 0 0 1-7.51-7.51zm29.563 5.311a7.5 7.5 0 0 1-5.32 2.2h-6.615V97.08h6.611a7.517 7.517 0 0 1 5.32 12.821z"/></svg>                                
-                                </div>
-                                <h4 class="fact__title">Medical Spesialities</h4>
-                                <span class="fact__count">689</span>
+                        <div class="team-cart">
+                            <div class="team-cart__image-wrapper">
+                                <img class="team-cart__image" src="./assets/images/team-member-3.jpg" alt="img3">
+                                <img class="team-cart__icon--center" src="./assets/images/team-custom-icon-3.png" alt="icon">
+                                <span class="team-cart__icon-wrapper">
+                                    <img class="team-cart__icon" src="./assets/images/team-custom-icon-3.png" alt="icon">
+                                </span>
                             </div>
+                            <h5 class="text-center my-3"><a href="#" class="team-cart__name">Nicole Dixon</a></h5>
+                            <h6 class="team-cart__work">Gynecology</h6>
+                            <p class="team-cart__desc">
+                                Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis
+                            </p>
+                            <ul class="team-cart__media">
+                                <li class="social-btn social-btn--instagram">
+                                    <a href="https://www.instagram.com/thashimova">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--mail">
+                                    <a href="mailto:turkansh@code.edu.az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--tel">
+                                    <a href="tel:(+994)775710218">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--linkedin"><a href="#">
+                                    <a href="https://linkedin.com/in/turkan-hashimova">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+            
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
-                        <div class="fact__box">
-                            <div class="fact__count-box">
-                                <div class="fact__icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1370b5" class="mb-4 fact__svg" viewBox="0 0 32 32"><path d="M27.59 22.19 26 21V5.3A3.3 3.3 0 0 0 22.7 2H10.3A3.3 3.3 0 0 0 7 5.3V11H5a1 1 0 0 0-1 1v15.07A2.94 2.94 0 0 0 6.93 30h18.14A2.94 2.94 0 0 0 28 27.07V23a1 1 0 0 0-.41-.81zM9 5.3A1.3 1.3 0 0 1 10.3 4h12.4A1.3 1.3 0 0 1 24 5.3v14.26l-11.41-8.37A1 1 0 0 0 12 11H9zm17 21.77a.93.93 0 0 1-.93.93H6.93a.93.93 0 0 1-.93-.93V13h5.67L26 23.51zM12 8a1 1 0 0 1 1-1h7a1 1 0 0 1 0 2h-7a1 1 0 0 1-1-1zm9 3a1 1 0 0 1-1 1h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1z"/></svg>
+                        <div class="team-cart">
+                            <div class="team-cart__image-wrapper">
+                                <img class="team-cart__image" src="./assets/images/team-member-4.jpg" alt="img4">
+                                <img class="team-cart__icon--center" src="./assets/images/team-custom-icon-4.png" alt="icon">
+                                <span class="team-cart__icon-wrapper">
+                                    <img class="team-cart__icon" src="./assets/images/team-custom-icon-4.png" alt="icon">
+                                </span>
+                            </div>
+                            <h5 class="text-center my-3"><a href="#" class="team-cart__name">Steven Elliott</a></h5>
+                            <h6 class="team-cart__work">Dietetics</h6>
+                            <p class="team-cart__desc">
+                                Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis
+                            </p>
+                            <ul class="team-cart__media">
+                                <li class="social-btn social-btn--instagram">
+                                    <a href="https://www.instagram.com/thashimova">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--mail">
+                                    <a href="mailto:turkansh@code.edu.az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--tel">
+                                    <a href="tel:(+994)775710218">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-btn social-btn--linkedin"><a href="#">
+                                    <a href="https://linkedin.com/in/turkan-hashimova">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="appointment">
+            <div class="custom-container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment__make-wrapper">
+                        <div class="appointment__make">
+                            <span class="appointment__subtitle">NEED A DOCTOR FOR CHECK-UP?</span>
+                            <h2 class="appointment__title">Just Make an Appointment and You’re Done!</h2>
+                            <div class="appointment__number">
+                                Get Your Quote or Call:
+                                <strong class="appointment__phone">(0080) 123-453-789</strong>
+                            </div>
+                            <a href="#" class="btn btn--bigger btn--black">
+                                Get an Appointment
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6">
+                        <figure class="appointment__image">
+                            <img src="./assets/images/image-4.png" alt="img4">
+                        </figure>
+                    </div>
+                </div>
+                <div class="fact">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
+                            <div class="fact__box">
+                                <div class="fact__count-box">
+                                    <div class="fact__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1370b5" class="mb-4 fact__svg" viewBox="0 0 50 50"><path d="M 25 2 C 12.308594 2 2 12.308594 2 25 C 2 37.691406 12.308594 48 25 48 C 37.691406 48 48 37.691406 48 25 C 48 12.308594 37.691406 2 25 2 Z M 25 4 C 36.609375 4 46 13.390625 46 25 C 46 36.609375 36.609375 46 25 46 C 13.390625 46 4 36.609375 4 25 C 4 13.390625 13.390625 4 25 4 Z M 25 7 C 22.800781 7 21 8.800781 21 11 C 21 13.199219 22.800781 15 25 15 C 27.199219 15 29 13.199219 29 11 C 29 8.800781 27.199219 7 25 7 Z M 25 9 C 26.117188 9 27 9.882813 27 11 C 27 12.117188 26.117188 13 25 13 C 23.882813 13 23 12.117188 23 11 C 23 9.882813 23.882813 9 25 9 Z M 12.8125 14.4375 C 11.796875 14.515625 10.867188 15.175781 10.53125 16.1875 C 10.085938 17.519531 10.804688 18.996094 12.125 19.46875 L 20 22.28125 L 20 28.875 L 17.5 38.90625 C 17.113281 40.460938 18.304688 42 19.90625 42 C 20.976563 42 21.945313 41.300781 22.28125 40.28125 L 25 32.125 L 27.71875 40.28125 C 28.054688 41.300781 29.023438 42 30.09375 42 C 31.695313 42 32.886719 40.460938 32.5 38.90625 L 30 28.875 L 30 22.28125 L 37.875 19.46875 C 39.195313 18.996094 39.914063 17.519531 39.46875 16.1875 C 39.019531 14.839844 37.503906 14.113281 36.15625 14.5625 L 28.875 17 L 21.125 17 L 13.84375 14.5625 C 13.507813 14.449219 13.152344 14.410156 12.8125 14.4375 Z M 12.9375 16.4375 C 13.015625 16.433594 13.105469 16.441406 13.1875 16.46875 L 20.6875 18.9375 L 20.84375 19 L 29.15625 19 L 29.3125 18.9375 L 36.8125 16.46875 C 37.136719 16.359375 37.453125 16.519531 37.5625 16.84375 C 37.667969 17.164063 37.503906 17.480469 37.1875 17.59375 L 28.65625 20.625 L 28 20.84375 L 28 29.125 L 30.5625 39.375 C 30.648438 39.714844 30.441406 40 30.09375 40 C 29.875 40 29.660156 39.863281 29.59375 39.65625 L 26.03125 29.03125 C 26.03125 29 26.03125 28.96875 26.03125 28.9375 C 26.070313 28.417969 25.703125 27.953125 25.1875 27.875 C 25.175781 27.875 25.167969 27.875 25.15625 27.875 C 25.105469 27.859375 25.054688 27.851563 25 27.84375 C 24.988281 27.84375 24.980469 27.84375 24.96875 27.84375 C 24.914063 27.851563 24.863281 27.859375 24.8125 27.875 C 24.757813 27.882813 24.707031 27.890625 24.65625 27.90625 C 24.203125 28.050781 23.917969 28.496094 23.96875 28.96875 L 20.40625 39.65625 C 20.339844 39.863281 20.125 40 19.90625 40 C 19.558594 40 19.351563 39.714844 19.4375 39.375 L 22 29.125 L 22 20.84375 L 21.34375 20.625 L 12.8125 17.59375 C 12.496094 17.480469 12.332031 17.164063 12.4375 16.84375 C 12.519531 16.601563 12.707031 16.453125 12.9375 16.4375 Z"></path></svg>
+                                    </div>
+                                    <h4 class="fact__title">Years of Experience</h4>
+                                    <span class="fact__count">25</span>
                                 </div>
-                                    <h4 class="fact__title">Happy Patients</h4>
-                                <span class="fact__count">9036</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
+                            <div class="fact__box">
+                                <div class="fact__count-box">
+                                    <div class="fact__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1370b5" class="mb-4 fact__svg" viewBox="0 0 32 32"><path d="M26.21 7.5h-6.49l-.55-1.64a2 2 0 0 0-1.88-1.36h-2.58a2 2 0 0 0-1.88 1.36l-.55 1.64H5.79A3.79 3.79 0 0 0 2 11.29v12.42a3.79 3.79 0 0 0 3.79 3.79h20.42A3.79 3.79 0 0 0 30 23.71V11.29a3.79 3.79 0 0 0-3.79-3.79zm-11.5-1h2.57l.33 1h-3.23zM28 23.71a1.79 1.79 0 0 1-1.79 1.79H5.79A1.79 1.79 0 0 1 4 23.71V11.29A1.79 1.79 0 0 1 5.79 9.5h20.42A1.79 1.79 0 0 1 28 11.29zM13 17.5a1 1 0 0 1-1 1h-1v1a1 1 0 0 1-2 0v-1H8a1 1 0 0 1 0-2h1v-1a1 1 0 0 1 2 0v1h1a1 1 0 0 1 1 1zm12-2a1 1 0 0 1-1 1h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 1 1zm-5 4a1 1 0 0 1-1 1h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1z" data-name="id card"/></svg>                                </div>
+                                    <h4 class="fact__title">Medical Spesialities</h4>
+                                    <span class="fact__count">470</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
+                            <div class="fact__box">
+                                <div class="fact__count-box">
+                                    <div class="fact__icon">
+                                        <svg data-name="Layer 1" fill="#1370b5" class="mb-4 fact__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M61.748 70.68h-4.914v-4.914a1.749 1.749 0 0 0-1.75-1.75h-8.649a1.75 1.75 0 0 0-1.75 1.75v4.914h-4.913a1.75 1.75 0 0 0-1.75 1.75v8.648a1.75 1.75 0 0 0 1.75 1.75h4.913v4.913a1.75 1.75 0 0 0 1.75 1.75h8.649a1.749 1.749 0 0 0 1.75-1.75v-4.913h4.914a1.75 1.75 0 0 0 1.75-1.75V72.43a1.75 1.75 0 0 0-1.75-1.75zM60 79.328h-4.916a1.75 1.75 0 0 0-1.75 1.75v4.913h-5.149v-4.913a1.75 1.75 0 0 0-1.75-1.75h-4.913V74.18h4.913a1.751 1.751 0 0 0 1.75-1.75v-4.914h5.149v4.914a1.751 1.751 0 0 0 1.75 1.75H60z"/><path d="M97.694 93.58H82.223V45.986a8.531 8.531 0 0 0-6.712-8.3l-1.93-.414a5.014 5.014 0 0 1-3.945-4.872v-4.633h3.975a1.75 1.75 0 0 0 1.75-1.75V14.146a1.75 1.75 0 0 0-1.75-1.75h-45.7a1.751 1.751 0 0 0-1.75 1.75v11.871a1.751 1.751 0 0 0 1.75 1.75h3.975V32.4a5.013 5.013 0 0 1-3.944 4.877l-1.931.414a8.53 8.53 0 0 0-6.712 8.3v61.129a8.5 8.5 0 0 0 8.488 8.489h45.948a8.483 8.483 0 0 0 3.379-.712 10.919 10.919 0 0 0 3.847.708h16.733a11.01 11.01 0 0 0 0-22.02zM22.8 59.924h55.923v33.66H22.8zM29.658 15.9h42.2v8.371h-42.2zm-2.917 25.208 1.93-.413a8.529 8.529 0 0 0 6.712-8.3v-4.628h30.753V32.4a8.53 8.53 0 0 0 6.713 8.3l1.929.413a5.016 5.016 0 0 1 3.945 4.878v10.433H22.8V45.986a5.015 5.015 0 0 1 3.941-4.878zM22.8 107.115V97.084h50.134a10.942 10.942 0 0 0 0 15.02h-45.15a4.994 4.994 0 0 1-4.984-4.989zm50.655-2.525a7.528 7.528 0 0 1 7.51-7.51h6.622v15.02h-6.626a7.519 7.519 0 0 1-7.51-7.51zm29.563 5.311a7.5 7.5 0 0 1-5.32 2.2h-6.615V97.08h6.611a7.517 7.517 0 0 1 5.32 12.821z"/></svg>                                
+                                    </div>
+                                    <h4 class="fact__title">Medical Spesialities</h4>
+                                    <span class="fact__count">689</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-sm-12 col-xl-3">
+                            <div class="fact__box">
+                                <div class="fact__count-box">
+                                    <div class="fact__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1370b5" class="mb-4 fact__svg" viewBox="0 0 32 32"><path d="M27.59 22.19 26 21V5.3A3.3 3.3 0 0 0 22.7 2H10.3A3.3 3.3 0 0 0 7 5.3V11H5a1 1 0 0 0-1 1v15.07A2.94 2.94 0 0 0 6.93 30h18.14A2.94 2.94 0 0 0 28 27.07V23a1 1 0 0 0-.41-.81zM9 5.3A1.3 1.3 0 0 1 10.3 4h12.4A1.3 1.3 0 0 1 24 5.3v14.26l-11.41-8.37A1 1 0 0 0 12 11H9zm17 21.77a.93.93 0 0 1-.93.93H6.93a.93.93 0 0 1-.93-.93V13h5.67L26 23.51zM12 8a1 1 0 0 1 1-1h7a1 1 0 0 1 0 2h-7a1 1 0 0 1-1-1zm9 3a1 1 0 0 1-1 1h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 1 1z"/></svg>
+                                    </div>
+                                        <h4 class="fact__title">Happy Patients</h4>
+                                    <span class="fact__count">9036</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/flickity/flickity.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>

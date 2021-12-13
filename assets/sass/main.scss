@@ -24,6 +24,7 @@
 @import './components/select-dropdown';
 @import './components/department-cart';
 @import './components/appointment-modal';
+@import './components/blog-cart';
 
 @import './layouts/header';
 @import './layouts/footer';
@@ -33,3 +34,6 @@
 @import './pages/doctor-details';
 @import './pages/timetable';
 @import './pages/all-departments';
+@import './pages/department';
+@import './pages/blog';
+@import './pages/blog-details';

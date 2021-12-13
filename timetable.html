@@ -15,672 +15,676 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="appointment-modal__wrapper">
-        <div class="appointment-modal">
-            <div class="appointment-modal__form-wrapper">
-                <div class="appointment-modal__title-box">
-                    <h4>Make an Appointment</h4>
-                    <div class="appointment-modal__title-text">
-                        We provide the most full medical services, so every person could have the <br>
-                        oportunity to receive qualitative medical help.
+    <div id="loading"></div>
+    <div class="page">
+        <div class="appointment-modal__wrapper">
+            <div class="appointment-modal">
+                <div class="appointment-modal__form-wrapper">
+                    <div class="appointment-modal__title-box">
+                        <h4>Make an Appointment</h4>
+                        <div class="appointment-modal__title-text">
+                            We provide the most full medical services, so every person could have the <br>
+                            oportunity to receive qualitative medical help.
+                        </div>
+                    </div>
+                    <form action="" class="appointment-modal__form">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="text" class="appointment-modal__input" placeholder="Your Name">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="tel" class="appointment-modal__input" placeholder="Your Phone">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="email" class="appointment-modal__input" placeholder="Your E-mail">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <select class="appointment-modal__input appointment-modal__input--select">
+                                    <option value="default" selected="" disabled="">Select Departments</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Urology">Urology</option>
+                                    <option value="Gynecological">Gynecological</option>
+                                    <option value="Pediatrical">Pediatrical</option>
+                                    <option value="Laboratory">Laboratory</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <input type="date" class="appointment-modal__input" placeholder="Select Date">
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
+                                <select class="appointment-modal__input appointment-modal__input--select">
+                                        <option value="" selected="" disabled="" style="display: none;">Select Time</option>
+                                        <option value="" data-value="default" disabled="" style="display: none;">Please select a department</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Cardiology" style="display: block;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Cardiology" style="display: block;">12:00AM - 02:00AM</option>
+                                        <option value="02:00PM - 04:00PM" data-value="Neurology" style="display: none;">02:00PM - 04:00PM</option>
+                                        <option value="04:00PM - 06:00PM" data-value="Neurology" style="display: none;">04:00PM - 06:00PM</option>
+                                        <option value="06:00PM - 08:00PM" data-value="Urology" style="display: none;">06:00PM - 08:00PM</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Urology" style="display: none;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Gynecological" style="display: none;">12:00AM - 02:00AM</option>
+                                        <option value="02:00PM - 04:00PM" data-value="Gynecological" style="display: none;">02:00PM - 04:00PM</option>
+                                        <option value="04:00PM - 06:00PM" data-value="Pediatrical" style="display: none;">04:00PM - 06:00PM</option>
+                                        <option value="06:00PM - 08:00PM" data-value="Pediatrical" style="display: none;">06:00PM - 08:00PM</option>
+                                        <option value="10:00AM - 12:00AM" data-value="Laboratory" style="display: none;">10:00AM - 12:00AM</option>
+                                        <option value="12:00AM - 02:00AM" data-value="Laboratory" style="display: none;">12:00AM - 02:00AM</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                                <textarea type="date" class="appointment-modal__input appointment-modal__input--textarea" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                                <a href="#" class="btn btn--black">Submit now</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="appointment-modal__form-close"></a>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header__top">
+                <div class="custom-container">
+                    <div class="header__top-inner">
+                        <a href="./index.html" class="header__top-logo">
+                            <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
+                        </a>
+                        <div class="header__top-main">
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <a target="_self" href="tel:+1258888455">
+                                        <i class="fa fa-phone header__info-fa"></i>
+                                    </a>
+                                </div>
+                                <div class="header__info-text">
+                                    <a target="_self" class="header__info-first" href="tel:+1258888455">
+                                        + (123) 1800-567-8990
+                                    </a>
+                                    <span>
+                                        + (123) 1800-453-1546
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <i class="fa fa-clock-o header__info-fa"></i>
+                                </div>
+                                <div class="header__info-text">
+                                    <span class="header__info-first">
+                                        Mon - Fri: 9:00AM - 5:00PM
+                                    </span>
+                                    <span>
+                                        Sat - Sun: Closed
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="header__info">
+                                <div class="header__info-icon">
+                                    <a target="_self" href="tel:+1258888455">
+                                        <i class="fa fa-envelope header__info-fa"></i>
+                                    </a>
+                                </div>
+                                <div class="header__info-text">
+                                    <a target="_self" class="header__info-first" href="mailto:mediclinic@qodeinteractive.com">
+                                        mediclinic@qodeinteractive.com
+                                    </a>
+                                    <span>
+                                        clinic@qodeinteractive.com
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <form action="" class="appointment-modal__form">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="text" class="appointment-modal__input" placeholder="Your Name">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="tel" class="appointment-modal__input" placeholder="Your Phone">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="email" class="appointment-modal__input" placeholder="Your E-mail">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <select class="appointment-modal__input appointment-modal__input--select">
-                                <option value="default" selected="" disabled="">Select Departments</option>
-                                <option value="Cardiology">Cardiology</option>
-                                <option value="Neurology">Neurology</option>
-                                <option value="Urology">Urology</option>
-                                <option value="Gynecological">Gynecological</option>
-                                <option value="Pediatrical">Pediatrical</option>
-                                <option value="Laboratory">Laboratory</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <input type="date" class="appointment-modal__input" placeholder="Select Date">
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-6 col-sm-12 col-xl-6 appointment-modal__row">
-                            <select class="appointment-modal__input appointment-modal__input--select">
-                                    <option value="" selected="" disabled="" style="display: none;">Select Time</option>
-                                    <option value="" data-value="default" disabled="" style="display: none;">Please select a department</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Cardiology" style="display: block;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Cardiology" style="display: block;">12:00AM - 02:00AM</option>
-                                    <option value="02:00PM - 04:00PM" data-value="Neurology" style="display: none;">02:00PM - 04:00PM</option>
-                                    <option value="04:00PM - 06:00PM" data-value="Neurology" style="display: none;">04:00PM - 06:00PM</option>
-                                    <option value="06:00PM - 08:00PM" data-value="Urology" style="display: none;">06:00PM - 08:00PM</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Urology" style="display: none;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Gynecological" style="display: none;">12:00AM - 02:00AM</option>
-                                    <option value="02:00PM - 04:00PM" data-value="Gynecological" style="display: none;">02:00PM - 04:00PM</option>
-                                    <option value="04:00PM - 06:00PM" data-value="Pediatrical" style="display: none;">04:00PM - 06:00PM</option>
-                                    <option value="06:00PM - 08:00PM" data-value="Pediatrical" style="display: none;">06:00PM - 08:00PM</option>
-                                    <option value="10:00AM - 12:00AM" data-value="Laboratory" style="display: none;">10:00AM - 12:00AM</option>
-                                    <option value="12:00AM - 02:00AM" data-value="Laboratory" style="display: none;">12:00AM - 02:00AM</option>
+            </div>
+            <div class="header__bottom">
+                <div class="custom-container">
+                    <div class="header__bottom-wrapper">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a href="./about.html" class="menu__list-link">Home</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Doctors</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our doctors</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Timetable</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Departments</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">All Departments</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cardiology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Neurology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Urology</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Gynecological</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Pediatrical</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Laboratory</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Blogs</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Shop</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">My Account</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cart</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Checkout</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">About us</a>
+                                    <div class="menu__dropdown">
+                                        <ul class="menu__dropdown-list">
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Who We Are</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clinic</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Services</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Process</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clients</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">FAQ</a></li>
+                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Working Hours</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="./tariffs.html" class="menu__list-link">Contact us</a>
+                                </li>
+                                <li class="menu__list-elem"></li>
+                            </ul>
+                        </nav>
+                        <div class="header__user-side">
+                            <a href="#" class="btn btn--primary">
+                                Make an Appointment
+                            </a>
+                            <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="header__user-side-circle">
+                                    <span class="header__user-side-count">2</span>
+                                </span>
                                 
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
-                            <textarea type="date" class="appointment-modal__input appointment-modal__input--textarea" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
-                            <a href="#" class="btn btn--black">Submit now</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <a href="#" class="appointment-modal__form-close"></a>
-        </div>
-    </div>
-    <header class="header">
-        <div class="header__top">
-            <div class="custom-container">
-                <div class="header__top-inner">
-                    <a href="./index.html" class="header__top-logo">
-                        <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
-                    </a>
-                    <div class="header__top-main">
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <a target="_self" href="tel:+1258888455">
-                                    <i class="fa fa-phone header__info-fa"></i>
-                                </a>
-                            </div>
-                            <div class="header__info-text">
-                                <a target="_self" class="header__info-first" href="tel:+1258888455">
-                                    + (123) 1800-567-8990
-                                </a>
-                                <span>
-                                    + (123) 1800-453-1546
-                                </span>
-                            </div>
-                        </div>
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <i class="fa fa-clock-o header__info-fa"></i>
-                            </div>
-                            <div class="header__info-text">
-                                <span class="header__info-first">
-                                    Mon - Fri: 9:00AM - 5:00PM
-                                </span>
-                                <span>
-                                    Sat - Sun: Closed
-                                </span>
-                            </div>
-                        </div>
-                        <div class="header__info">
-                            <div class="header__info-icon">
-                                <a target="_self" href="tel:+1258888455">
-                                    <i class="fa fa-envelope header__info-fa"></i>
-                                </a>
-                            </div>
-                            <div class="header__info-text">
-                                <a target="_self" class="header__info-first" href="mailto:mediclinic@qodeinteractive.com">
-                                    mediclinic@qodeinteractive.com
-                                </a>
-                                <span>
-                                    clinic@qodeinteractive.com
-                                </span>
-                            </div>
+                            </a>
+                            <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-search"></i>
+                            </a>
+                            <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-bars"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="header__bottom">
+        </header>
+        <section class="timetable-main">
+            <div class="custom-container-fluid p-0 main__img">
+                <div class="main__wrapper">
+                    <h1 class="main__title">Timetable</h1>
+                    <span class="main__subtitle">Home  /  Timetable</span>
+                </div>
+            </div>
+        </section>
+        <section class="doctor-details">
             <div class="custom-container">
-                <div class="header__bottom-wrapper">
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__list-item">
-                                <a href="./about.html" class="menu__list-link">Home</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Doctors</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our doctors</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Timetable</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Departments</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">All Departments</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cardiology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Neurology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Urology</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Gynecological</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Pediatrical</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Laboratory</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Blogs</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Shop</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">My Account</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Cart</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Checkout</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">About us</a>
-                                <div class="menu__dropdown">
-                                    <ul class="menu__dropdown-list">
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Who We Are</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clinic</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Services</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Process</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clients</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">FAQ</a></li>
-                                        <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Working Hours</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="./tariffs.html" class="menu__list-link">Contact us</a>
-                            </li>
-                            <li class="menu__list-elem"></li>
+                <div class="timetable__selector">
+                    <div class="selector selector--bigger  mb-5">
+                        <span class="selector__target">
+                            <span>All Events</span>
+                            <svg class="selector__dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="#333">    <path d="M15,23c-0.256,0-0.512-0.098-0.707-0.293l-10-10c-0.286-0.286-0.372-0.716-0.217-1.09C4.23,11.243,4.596,11,5,11h20 c0.404,0,0.77,0.243,0.924,0.617c0.155,0.374,0.069,0.804-0.217,1.09l-10,10C15.512,22.902,15.256,23,15,23z"></path></svg>
+                        </span>
+                        <ul class="selector__dropdown d-none">
+                            <li class="selector__list"><a class="selector__link" href="#">All Events</a></li>
+                            <li class="selector__list"><a class="selector__link" href="#">Salam</a></li>
+                            <li class="selector__list"><a class="selector__link" href="#">Salam</a></li>
                         </ul>
-                    </nav>
-                    <div class="header__user-side">
-                        <a href="#" class="btn btn--primary">
-                            Make an Appointment
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span class="header__user-side-circle">
-                                <span class="header__user-side-count">2</span>
-                            </span>
-                            
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <a href="#" class="header__user-side-icon">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
+                    </select>
+                </div>
+                <div class="timetable">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr class="bg-light-gray">
+                                <th class="text-uppercase">Time
+                                </th>
+                                <th class="text-uppercase">Monday</th>
+                                <th class="text-uppercase">Tuesday</th>
+                                <th class="text-uppercase">Wednesday</th>
+                                <th class="text-uppercase">Thursday</th>
+                                <th class="text-uppercase">Friday</th>
+                                <th class="text-uppercase">Saturday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle">09.00 - 10.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td class="align-middle">10.00 - 11.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td class="align-middle">11.00 - 12.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td class="align-middle">13.00 - 14.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td class="align-middle">14.00 - 15.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td class="align-middle">15.00 - 16.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+    
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td class="align-middle">16.00 - 17.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td class="align-middle">17.00 - 18.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td class="align-middle">18.00 - 19.00</td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                                <td class="timetable__data">
+                                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
+                                    <div class="margin-10px-top font-size14">Steven Elliott</div>
+                                    <div class="timetable__dropdown d-none">
+                                        Mediclinic Office 130, Hall B
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-    </header>
-    <section class="timetable-main">
-        <div class="custom-container-fluid p-0 main__img">
-            <div class="main__wrapper">
-                <h1 class="main__title">Timetable</h1>
-                <span class="main__subtitle">Home  /  Timetable</span>
-            </div>
-        </div>
-    </section>
-    <section class="doctor-details">
-        <div class="custom-container">
-            <div class="timetable__selector">
-                <div class="selector selector--bigger  mb-5">
-                    <span class="selector__target">
-                        <span>All Events</span>
-                        <svg class="selector__dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="#333">    <path d="M15,23c-0.256,0-0.512-0.098-0.707-0.293l-10-10c-0.286-0.286-0.372-0.716-0.217-1.09C4.23,11.243,4.596,11,5,11h20 c0.404,0,0.77,0.243,0.924,0.617c0.155,0.374,0.069,0.804-0.217,1.09l-10,10C15.512,22.902,15.256,23,15,23z"></path></svg>
-                    </span>
-                    <ul class="selector__dropdown d-none">
-                        <li class="selector__list"><a class="selector__link" href="#">All Events</a></li>
-                        <li class="selector__list"><a class="selector__link" href="#">Salam</a></li>
-                        <li class="selector__list"><a class="selector__link" href="#">Salam</a></li>
-                    </ul>
-                </select>
-            </div>
-            <div class="timetable">
-                <table class="table table-bordered text-center">
-                    <thead>
-                        <tr class="bg-light-gray">
-                            <th class="text-uppercase">Time
-                            </th>
-                            <th class="text-uppercase">Monday</th>
-                            <th class="text-uppercase">Tuesday</th>
-                            <th class="text-uppercase">Wednesday</th>
-                            <th class="text-uppercase">Thursday</th>
-                            <th class="text-uppercase">Friday</th>
-                            <th class="text-uppercase">Saturday</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="align-middle">09.00 - 10.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="align-middle">10.00 - 11.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="align-middle">11.00 - 12.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="align-middle">13.00 - 14.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="align-middle">14.00 - 15.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="align-middle">15.00 - 16.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="align-middle">16.00 - 17.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="align-middle">17.00 - 18.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="align-middle">18.00 - 19.00</td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                            <td class="timetable__data">
-                                <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Primary Health Care</span>
-                                <div class="margin-10px-top font-size14">Steven Elliott</div>
-                                <div class="timetable__dropdown d-none">
-                                    Mediclinic Office 130, Hall B
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/flickity/flickity.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>

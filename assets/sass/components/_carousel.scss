@@ -9,6 +9,9 @@
     &__wrapper{
         padding: 5rem 0;
         background-color: $white;
+        &--pad{
+            padding: 0%;
+        }
     }
     &__content{
         position: relative;
@@ -32,6 +35,10 @@
         }
         //background-image: url("../images/slider-1.jpg");
         &--department{
+            width: 30%;
+            margin-right: 4.2rem;
+        }
+        &--blog{
             width: 30%;
             margin-right: 4.2rem;
         }
@@ -129,7 +136,26 @@
         }
     }
     .next{
-        right: -20px;
+        right: -30px;
+        &:hover{
+            border: 1px solid $blue-v3;
+        }
+
+    }
+    .flickity-page-dots .dot {
+        display: inline-block;
+    }
+}
+
+.blog{
+    .previous{
+        left: -30px;
+        &:hover{
+            border: 1px solid $blue-v3;
+        }
+    }
+    .next{
+        right: -30px;
         &:hover{
             border: 1px solid $blue-v3;
         }
