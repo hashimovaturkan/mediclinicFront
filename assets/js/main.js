@@ -137,8 +137,9 @@ timetableLink?.forEach(function(item){
 const appointmentModal = document.querySelector(".appointment-modal__wrapper");
 const appointmentModalCloseBtn = document.querySelector(".appointment-modal__form-close");
 const appointmentModalOpenBtn = document.querySelector(".makeAppointmentModal");
-
+console.log(appointmentModalOpenBtn)
 appointmentModalCloseBtn?.addEventListener("click",function(e){
+
   e.preventDefault();
   e.stopPropagation();
   appointmentModal.style.opacity="0";

@@ -12,5 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "node-sass": "^6.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashimovaturkan/mediclinicFront.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hashimovaturkan/mediclinicFront/issues"
+  },
+  "homepage": "https://github.com/hashimovaturkan/mediclinicFront#readme"
 }

@@ -88,4 +88,70 @@
         color:$white;
         
     }
+    &__user-side-profile{
+        @include flexbox(center);
+        padding: 0.5rem 2rem;
+        border-radius: 1rem;
+        background-color: rgb(241, 241, 241);
+    }
+    &__user-side-img{
+        border-radius: 50%;
+        width: 3.5rem;
+        object-fit: contain;
+        margin-right: 1rem;
+    }
+    &__user-side-info{
+        font-size: 1.4rem;
+        @include flexbox(center, flex-start);
+        flex-direction: column;
+        line-height: 17px;
+        //padding-right: 5.5rem;
+        transition: all 1s;
+
+        opacity: 0;
+        width: 0;
+        padding: 0%;
+        
+    }
+    &__user-side-name{
+        color: $black;
+        white-space: nowrap;
+        font-weight: 600;
+    }
+    &__user-side-mail{
+        white-space: nowrap;
+        color:rgb(116, 116, 116);
+        
+    }
+    &__user-side-dropdown{
+        @include flexbox(center, flex-start);
+        //opacity: 0;
+        //visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        padding: 3rem 2.6rem;
+        z-index: 3;
+        background-color: $white;
+        border-radius: 1rem;
+        & a{
+            display: inline-block;
+            width: 100%;
+            color:#333;
+            font-size: 1.4rem;
+            height: 100%;
+        }
+        & li{
+            height: 4rem;
+            width: 100%;
+            
+            &:last-child(){
+                border-top: 1px solid rgb(212, 212, 212);
+                padding-top: 1rem;
+            }
+        }
+        & span{
+            margin-left: 1rem;
+        }
+    }
 }
