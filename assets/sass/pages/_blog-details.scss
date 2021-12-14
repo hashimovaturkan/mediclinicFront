@@ -218,6 +218,178 @@
         }
     }
     &__next{
-        
+        position: relative;
+        width: 100%;
+        vertical-align: middle;
+        padding: 0;
+        box-sizing: border-box;
+        border-bottom: 1px solid #dadada;
+        padding: 39px 0 30px;
+        & a{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: right;
+            color: #000;
+            font-weight: 500;
+            transition: color .2s ease-out;
+            &:hover span{
+                color:$blue-v3;
+            }
+            & img{
+                text-align: right;
+                max-width: 100%;
+                height: auto;
+                width: 13rem;
+            
+            }
+            & span{
+                right: 160px;
+                font-weight: 600;
+                margin-right: 3rem;
+                //position: absolute;
+                //top: 50%;
+                //transform: translateY(-50%);
+                display: inline;
+            }
+        }
+    }
+    &__doctor{
+        position: relative;
+        display: flex;
+        width: 100%;
+        vertical-align: middle;
+        padding: 0;
+        background-color: transparent;
+        text-align: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid #dadada;
+        padding: 36px 0 12px;
+        min-height: 78px;
+        & a{
+            color: #333;
+            -webkit-transition: color .2s ease-out;
+            -moz-transition: color .2s ease-out;
+            transition: color .2s ease-out;
+            margin-top: 7px;
+            & img{
+                display: block;
+                border-radius: 5em;
+                max-width: 100%;
+            }
+        }
+    }
+    &__doctor-img{
+        position: relative;
+        padding: 4px 0 0 40px;
+        text-align: left;
+        & h5{
+            color: #333;
+            transition: color .2s ease-out;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+        & div{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            vertical-align: middle;
+            margin: 5px 0 14px;
+        }
+    }
+    &__doctor-media{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        text-align: left;
+        & a{
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0;
+            margin: 0 15px 0 0;
+            font-size: 14px;
+            color: #333;
+            transition: color .2s ease-out;
+            &:hover{
+                color:$blue-v3;
+            }
+        }
+
+    }
+    &__comments{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        padding: 0;
+        box-sizing: border-box;
+        border-bottom: 1px solid #dadada;
+        padding: 40px 0;
+        & h5{
+            margin-bottom: 28px;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.66em;
+            color: #333;
+        }
+    }
+    &__comments-main{
+        position: relative;
+        z-index: 150;
+    }
+    &__comments-first{
+        display: flex;
+        padding: 3rem 0;
+        border-top: 1px solid #dadada;
+        &--sub{
+            margin-left: 5rem;
+        }
+    }
+    &__comments-first-img{
+        display: block;
+        left: 0;
+        width: 120px;
+        height: 120px;
+        & img{
+            display: block;
+            border-radius: 4em;
+        }
+    }
+    &__comments-first-info{
+        padding: 0 0 0 50px;
+        min-height: 82px;
+        & h5{
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 80%;
+            margin: 0 0 7px;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.66em;
+        }
+        & p{
+            margin: -2px 0 13px;
+        }
+    }
+    &__comments-first-mini{
+        & span{
+            color: #acacac;
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+    &__comments-first-reply{
+        font-size: 12px;
+        cursor: pointer;
+        padding: 8px 5px 0 15px;
+        color: #acacac;
+        & i{
+            color: #000;
+            font-size: 10px;
+            
+        }
     }
 }

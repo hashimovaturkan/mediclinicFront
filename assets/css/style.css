@@ -7,6 +7,10 @@
 .my-8 {
   margin: 15rem 0; }
 
+.visibility {
+  opacity: 0 !important;
+  visibility: hidden !important; }
+
 /*!
  * Bootstrap Grid v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -9378,3 +9382,154 @@ body {
       font-size: 12px; }
     .blog-details__post-info span:last-child {
       color: #1370b5; }
+
+.blog-details__next {
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dadada;
+  padding: 39px 0 30px; }
+  .blog-details__next a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    color: #000;
+    font-weight: 500;
+    transition: color .2s ease-out; }
+    .blog-details__next a:hover span {
+      color: #1370b5; }
+    .blog-details__next a img {
+      text-align: right;
+      max-width: 100%;
+      height: auto;
+      width: 13rem; }
+    .blog-details__next a span {
+      right: 160px;
+      font-weight: 600;
+      margin-right: 3rem;
+      display: inline; }
+
+.blog-details__doctor {
+  position: relative;
+  display: flex;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0;
+  background-color: transparent;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dadada;
+  padding: 36px 0 12px;
+  min-height: 78px; }
+  .blog-details__doctor a {
+    color: #333;
+    -webkit-transition: color .2s ease-out;
+    -moz-transition: color .2s ease-out;
+    transition: color .2s ease-out;
+    margin-top: 7px; }
+    .blog-details__doctor a img {
+      display: block;
+      border-radius: 5em;
+      max-width: 100%; }
+
+.blog-details__doctor-img {
+  position: relative;
+  padding: 4px 0 0 40px;
+  text-align: left; }
+  .blog-details__doctor-img h5 {
+    color: #333;
+    transition: color .2s ease-out;
+    font-weight: 600;
+    font-size: 1.6rem; }
+  .blog-details__doctor-img div {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    margin: 5px 0 14px; }
+
+.blog-details__doctor-media {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  text-align: left; }
+  .blog-details__doctor-media a {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0 15px 0 0;
+    font-size: 14px;
+    color: #333;
+    transition: color .2s ease-out; }
+    .blog-details__doctor-media a:hover {
+      color: #1370b5; }
+
+.blog-details__comments {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dadada;
+  padding: 40px 0; }
+  .blog-details__comments h5 {
+    margin-bottom: 28px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.66em;
+    color: #333; }
+
+.blog-details__comments-main {
+  position: relative;
+  z-index: 150; }
+
+.blog-details__comments-first {
+  display: flex;
+  padding: 3rem 0;
+  border-top: 1px solid #dadada; }
+  .blog-details__comments-first--sub {
+    margin-left: 5rem; }
+
+.blog-details__comments-first-img {
+  display: block;
+  left: 0;
+  width: 120px;
+  height: 120px; }
+  .blog-details__comments-first-img img {
+    display: block;
+    border-radius: 4em; }
+
+.blog-details__comments-first-info {
+  padding: 0 0 0 50px;
+  min-height: 82px; }
+  .blog-details__comments-first-info h5 {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    margin: 0 0 7px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.66em; }
+  .blog-details__comments-first-info p {
+    margin: -2px 0 13px; }
+
+.blog-details__comments-first-mini span {
+  color: #acacac;
+  margin: 0;
+  font-size: 12px; }
+
+.blog-details__comments-first-reply {
+  font-size: 12px;
+  cursor: pointer;
+  padding: 8px 5px 0 15px;
+  color: #acacac; }
+  .blog-details__comments-first-reply i {
+    color: #000;
+    font-size: 10px; }
