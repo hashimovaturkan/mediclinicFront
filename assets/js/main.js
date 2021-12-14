@@ -137,9 +137,8 @@ timetableLink?.forEach(function(item){
 const appointmentModal = document.querySelector(".appointment-modal__wrapper");
 const appointmentModalCloseBtn = document.querySelector(".appointment-modal__form-close");
 const appointmentModalOpenBtn = document.querySelector(".makeAppointmentModal");
-console.log(appointmentModalOpenBtn)
-appointmentModalCloseBtn?.addEventListener("click",function(e){
 
+appointmentModalCloseBtn?.addEventListener("click",function(e){
   e.preventDefault();
   e.stopPropagation();
   appointmentModal.style.opacity="0";
@@ -216,8 +215,7 @@ blogCategories?.forEach(function(item){
     setVisible('#loading', false);
   });
 
-
-  //peofile-dropdown
+//profile-dropdown
 const profileDropdownTitle = document.querySelector(".header__user-side-profile");
 const infoDropdown = document.querySelector(".header__user-side-info");
 const profileDropdown = document.querySelector(".header__user-side-dropdown");
@@ -235,4 +233,16 @@ profileDropdownTitle?.addEventListener("mouseout",function(e){
 })
 profileDropdownTitle?.addEventListener("click",function(e){
   profileDropdown.classList.toggle("visibility");
+})
+profileDropdown?.addEventListener("mouseover",function(e){
+  infoDropdown.style.opacity ="1";
+  infoDropdown.style.width ="150px";
+  infoDropdown.style.paddingRight ="55px";
+  profileDropdown.classList.remove("visibility");
+})
+profileDropdown?.addEventListener("mouseout",function(e){
+  infoDropdown.style.opacity ="0";
+  infoDropdown.style.width ="0";
+  infoDropdown.style.paddingRight ="0%";
+  profileDropdown.classList.add("visibility");
 })
