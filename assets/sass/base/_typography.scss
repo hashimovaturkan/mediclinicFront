@@ -19,3 +19,121 @@
 .text-center{
     text-align: center;
 }
+
+.heading{
+    &--calc{
+        margin-bottom: 4.8rem;
+    }
+    &--news{
+        margin-bottom: 9.6rem;
+    }
+    &--center{
+        text-align: center;
+        margin-bottom: 4rem;
+        
+        &--line{
+            margin-bottom: 9.2rem;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -1.6rem;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 0.4rem;
+                width: 8.7rem;
+                background-color: $brand-color-light;
+            }
+        }
+    }
+    &__title{
+        font-weight: $fw-bold;
+        color: #3e454f;
+        margin-bottom: 0.8rem;
+        font-size: 4rem;
+        line-height: 5.6rem;
+        &--dark{
+            color: $black;
+        }
+        &--footer{
+            margin-bottom: 4rem;
+        }
+    }
+    &__text{
+        margin: 0 auto;
+        font-size: $default-font-size; //home
+        line-height: 2.8rem; //home
+        max-width: 80rem; //home
+        &--home{
+            margin: 0%;
+            max-width: 800px;
+        }
+        &--bigger{
+            font-size: 1.8rem
+        }
+        &--tariffs{
+            max-width: 680px;
+        }
+        &--innovations{
+            max-width: 68rem;
+            font-size: 1.8rem;
+            line-height: 3.2rem;
+        }
+    }
+    &--btwn{
+        @include flexbox(space-between);
+        margin-bottom: 7.2rem;
+    }
+}
+
+.mb-40{
+    margin-bottom:4rem;
+}
+.mt-40{
+    margin-top: 4rem;
+}
+.mb-36{
+    margin-bottom:3.6rem;
+}
+.mb-52{
+    margin-bottom:5.2rem;
+}
+.pl-16{
+    padding-left: 1.6rem;
+}
+.pr-16{
+    padding-right: 1.6rem;
+}
+.mr-10{
+    margin-right: 1rem;
+}
+.mb-72{
+    margin-bottom: 7.2rem;
+}
+.mb-88{
+    margin-bottom: 8.8rem;
+}
+.h-0{
+    height: 0;
+}
+.mb-24{
+    margin-bottom: 2.4rem;
+}
+.mh-0{
+    min-height: 0;
+}
+.mb-16{
+    margin-bottom: 1.6rem;
+}
+.mb-64{
+    margin-bottom: 6.4rem;
+}
+.pb-32{
+   padding-bottom: 3.2rem; 
+}
+.mb-32{
+    margin-bottom: 3.2rem;
+}
+
+
+

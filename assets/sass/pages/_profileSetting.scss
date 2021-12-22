@@ -1,0 +1,14 @@
+.setting{
+    margin: 10rem 0;
+    &__main{
+        background-image: url('../images/shop-parallax-img.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 31rem;
+    }
+    &__wrapper{
+        background-color:#c8cbcf;
+        padding: 3rem;
+        border-radius: 8px;
+    }
+}

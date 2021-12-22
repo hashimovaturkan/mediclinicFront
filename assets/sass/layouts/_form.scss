@@ -1,0 +1,193 @@
+.form{
+    padding: 2.4rem 4.8rem 4rem 2.4rem;
+    &__wrapper{
+        position: relative;
+    }
+    &--password{
+        display: none;
+    }
+    &--signup{
+        
+        width: calc(100% - 32.8rem);
+    }
+    &--signin{
+        margin-left: 4.8rem;
+        padding: 2.4rem 6.4rem 3.2rem 6.4rem;
+        width: calc(100% - 49.7rem);
+    }
+    &__item{
+        width: 100%;
+        position: relative;
+    }
+    &__item-title{
+        display: inline-block;
+        margin-bottom: 0.7rem;
+        color:#3e434b;
+    }
+    &__placeholder{
+        position: absolute;
+        left: 1.7rem;
+        top: 1.6rem;
+        color:rgba(255, 255, 255, 0.5);
+        transition: all .15s ease-in-out;
+    }
+    &__input{
+        width: 100%;
+        display: inline-block;
+        outline: none;
+        height: 5.6rem;
+        padding: 1.6rem;
+        color: $white;
+        border-radius: $border-radius;
+        font-weight: 500;
+        border: 1px solid #3e434b;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        background-color:  $blue-baby;
+        transition: border-color .15s ease-in-out,
+                    box-shadow .15s ease-in-out;
+        // &:focus+label{
+        //     left: 1.7rem;
+        //     top: 0.4rem;
+        //     font-size: 1.4rem;
+        //     color: rgba(#fff, .3);
+        // }
+        // &:focus{
+        //     padding-bottom: 0;
+        // }
+        
+
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+    &__helper{
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: $warning;
+        margin-left: 1.6rem;
+        margin-top: 0.5rem;
+    }
+    &__icon-box{
+        position: absolute;
+        top: 1.3rem;
+        right: 0.5rem;
+        display: inline-block;
+        background-color:  $blue-baby;
+        padding: 0.5rem 1rem;
+    }
+    &__icon{
+        color:$white-pale;
+    }
+    &__video{
+        display: flex;
+        cursor: pointer;
+    }
+    &__video-text{
+        padding-left: 0.5rem;
+    }
+    &__highlight{
+        color: $brand-color-light;
+    }
+    &__textarea{
+        margin-bottom: 3.2rem;
+        width: 100%;
+        border-radius: $border-radius;
+        background-color: $blue-baby;
+        border: 0.1rem solid #3e434b;
+        padding: 1.5rem;
+        height: 9.6rem !important;
+        color: $white !important;
+        font-weight: 500;
+        outline: none;
+        resize: none;
+    }
+}
+
+
+@media (max-width: 1199.98px) { 
+    .form--signin{
+        padding-left: 0;
+        width: calc(100% - 32.8rem);
+        padding-right: 0;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .form--signin{
+        width: 100% !important;
+        margin: 0 !important;
+        order: -1;
+    }
+    .form--signup{
+        width: 100%;
+        padding: 0%;
+      }
+}
+
+
+.aside-form{
+    border-right: 1px solid rgba(155, 155, 155, 0.5);
+    height: 100%;
+    &__img{
+        text-align: center;
+        & span{
+            display: inline-block;
+            width: 12rem;
+            position: relative;
+            & img{
+                width: 100%;
+                border-radius: 50%;
+                object-fit: contain;
+            }
+        }
+        & h2{
+            margin-top: 1.5rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+    &__pen{
+        position: absolute !important;
+        bottom: 8px;
+        left: -5px;
+        display: flex !important;
+        justify-content: flex-end;
+        width: 30px;
+        & svg{
+            width: 20px;
+            fill:$black-dark-mode;
+        }
+    }
+    &__list{
+        width: 100%;
+        display: inline-block;
+        padding: 1rem;
+        padding-top: 3rem;
+        & li{
+            display: block;
+            &:first-child a{
+                background-color:$blue-baby;
+                color:$white;
+            }
+            &:first-child i{
+                color:$white;
+            } 
+            & a{
+                border-radius: 8px;
+                display: inline-block;
+                padding: 1rem;
+                width: 100%;
+                color:$blue-baby;
+                font-weight: 600;
+                & i{
+                    color:$blue-baby;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

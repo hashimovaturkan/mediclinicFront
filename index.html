@@ -10,9 +10,12 @@
     <meta name="title" content="MediClinic">
     <link rel="icon" href="./assets/icons/cropped-favicon-32x32.png" sizes="32x32" />
     <link rel="stylesheet" href="./assets/flickity/flickity.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
 </head>
 <body>
     <div id="loading"></div>
@@ -81,6 +84,58 @@
                     </form>
                 </div>
                 <a href="#" class="appointment-modal__form-close"></a>
+            </div>
+        </div>
+        <div class="search__wrapper">
+            <div class="search">
+                <div class="search__form-wrapper">
+                    <div class="appointment-modal__title-box">
+                        <h4>Search</h4>
+                    </div>
+                    <form action="" class="appointment-modal__form">
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                                <div class="search__icon-wrapper">
+                                    <input type="text" class="appointment-modal__input" placeholder="Search word...">
+                                    <a href="#" class="search__icon">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="search__form-close"></a>
+            </div>
+        </div>
+        <div class="menu-side">
+            <div class="menu-side__head">
+                <a href="./index.html" class="header__top-logo menu-side__title">
+                    <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
+                </a>
+                <i class="icon-close_two_tone menu-side__close-icon" id="closeIcon"></i>
+            </div>
+            <nav class="menu-side__navbar">
+                <ul class="menu-side__list">
+                    <li class="menu-side__list-item"><a href="./about.html" class="menu-side__list-link">Doctors</a></li>
+                    <li class="menu-side__list-item"><a href="./tariffs.html" class="menu-side__list-link">Timetable</a></li>
+                    <li class="menu-side__list-item"><a href="./services.html" class="menu-side__list-link">Departments</a></li>
+                    <li class="menu-side__list-item"><a href="./shops.html" class="menu-side__list-link">Blogs</a></li>
+                    <li class="menu-side__list-item"><a href="./innovations.html" class="menu-side__list-link">FAQ</a></li>
+                    <li class="menu-side__list-item"><a href="./contact.html" class="menu-side__list-link">About us</a></li>
+                    <li class="menu-side__list-item"><a href="./contact.html" class="menu-side__list-link">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="menu-side__footer">
+                <div class="menu-side__lang">
+                    <a href="" class="btn btn--menu mr-10">AZE</a>
+                    <a href="" class="btn btn--menu mr-10">ENG</a>
+                    <a href="" class="btn btn--menu">RUS</a>
+                </div>
+                <a href="" class="btn btn--menu header__search-1">
+                    <i class="icon-phone_two_tone fa fa-search"></i>
+                    <span>Search</span>
+                </a>
             </div>
         </div>
         <header class="header">
@@ -173,9 +228,9 @@
                                     <a href="./tariffs.html" class="menu__list-link">Blogs</a>
                                 </li>
                                 <li class="menu__list-item">
-                                    <a href="./tariffs.html" class="menu__list-link">Shop</a>
+                                    <a href="./tariffs.html" class="menu__list-link">FAQ</a>
                                 </li>
-                                <li class="menu__list-item">
+                                <!-- <li class="menu__list-item">
                                     <a href="./tariffs.html" class="menu__list-link">My Account</a>
                                     <div class="menu__dropdown">
                                         <ul class="menu__dropdown-list">
@@ -183,7 +238,7 @@
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Checkout</a></li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li class="menu__list-item">
                                     <a href="./tariffs.html" class="menu__list-link">About us</a>
                                     <div class="menu__dropdown">
@@ -193,7 +248,6 @@
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Services</a></li>
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Process</a></li>
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clients</a></li>
-                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">FAQ</a></li>
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Working Hours</a></li>
                                         </ul>
                                     </div>
@@ -205,16 +259,6 @@
                             </ul>
                         </nav>
                         <div class="header__user-side">
-                            <a href="#" class="btn btn--primary makeAppointmentModal">
-                                Make an Appointment
-                            </a>
-                            <!-- <a href="#" class="header__user-side-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span class="header__user-side-circle">
-                                    <span class="header__user-side-count">2</span>
-                                </span>
-                                
-                            </a> -->
                             <div class="header__user-side-icon">
                                 <span class="header__user-side-profile">
                                     <img src="./assets/images/notfoundprofile.png" class="header__user-side-img" alt="">
@@ -249,13 +293,53 @@
                                     </a></li>
                                 </ul>
                             </div>
-                            <a href="#" class="header__user-side-icon">
+                            <a href="./signin.html" class="header__user-account">
+                                <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                                <span class="header__user-account__text">Hesabım</span>
+                            </a>
+                            <a href="#" class="btn btn--primary makeAppointmentModal">
+                                Make an Appointment
+                            </a>
+                            <div class="header__lang" tabindex="0">
+                                <a class="header__lang__current">AZE</a>
+                                <ul class="header__lang__list d-none">
+                                    <li class="header__lang__list-item"><a class="header__lang__item-link">ENG</a></li>
+                                    <li class="header__lang__list-item"><a class="header__lang__item-link">RUS</a></li>
+                                </ul>
+                            </div>
+                            <!-- <a href="#" class="header__user-side-icon">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="header__user-side-circle">
+                                    <span class="header__user-side-count">2</span>
+                                </span>
+                                
+                            </a> -->
+                            
+                            <a href="#" class="header__user-side-icon header__search header__search-1">
                                 <i class="fa fa-search"></i>
                             </a>
-                            <a href="#" class="header__user-side-icon">
+                            <!-- <a href="#" class="header__user-side-icon">
                                 <i class="fa fa-bars"></i>
-                            </a>
+                            </a> -->
                         </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="header__mobile">
+            <div class="header__top">
+                <div class="custom-container">
+                    <div class="header__mobile__wrapper">
+                        <a href="#" class="header__user-side-icon header__user-side-icon--mobile">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <a href="./index.html" class="header__top-logo--center">
+                            <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
+                        </a>
+                        <a href="./signin.html" class="header__user-account">
+                            <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                            
+                        </a>
                     </div>
                 </div>
             </div>
@@ -663,6 +747,202 @@
                 </div>
             </div>
         </section>
+        <section class="all-departments__advertisement">
+            <div class="carousel__wrapper">
+                <div class="carousel--none" data-flickity='{ "wrapAround": true, "prevNextButtons": false, "groupCells": 1, "pageDots": false}'>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/1.png" alt="" class="carousel__store-img">
+                        </a>
+                    </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/2.png" alt="" class="carousel__store-img">
+                        </a>
+                    </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/3.png" alt="" class="carousel__store-img">
+                        </a>
+                    </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/4.png" alt="" class="carousel__store-img">
+                        </a>
+                    </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/5.png" alt="" class="carousel__store-img">
+                        </a>
+                    </div>
+                    <div class="carousel__cell carousel__cell--store">
+                        <a href="" class="carousel__store-link" >
+                            <img src="./assets/images/3.png" alt="" class="carousel__store-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+        <footer>
+            <div class="container footer">
+                <div class="footer__about">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <img src="./assets/icons/logo-2.png" alt="">
+                        </a>
+                    </div>
+                    <p class="about-text">
+                        Lorem ipsum dolor sit. beatae quasi tempora maxime praesentium.
+                    </p>
+                    <p class="about-text">
+                        molestiae, autem ad dolorum eius? Facere accusantium nostrum quidem ea voluptatem veniam ipsum facilis!
+                    </p>
+                    <ul class="footer-social-links">
+                        <a href="#">
+                            <li><i class="fab fa-facebook-f"></i></li>
+                        </a>
+                        <a href="#">
+                            <li><i class="fab fa-pinterest-p"></i></li>
+                        </a>
+                        <a href="#">
+                            <li><i class="fab fa-twitter"></i></li>
+                        </a>
+                        <a href="#">
+                            <li><i class="fab fa-skype"></i></li>
+                        </a>
+                        <a href="#">
+                            <li><i class="fab fa-linkedin-in"></i></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer__departments">
+                    <div class="footer-title">
+                        <h2>Departments
+                            <span class="line">
+                                <span class="dot"></span>
+                            </span>
+                        </h2>
+                    </div>
+                    <ul class="footer-link-pages">
+                        <a href="">
+                            <li><i class="fas fa-plus"></i>Surgery & Radiology</li>
+                        </a>
+                        <a href="">
+                            <li><i class="fas fa-plus"></i>Family Medicine</li>
+                        </a>
+                        <a href="">
+                            <li><i class="fas fa-plus"></i>Women’s Health</li>
+                        </a>
+                        <a href="">
+                            <li><i class="fas fa-plus"></i>Optician</li>
+                        </a>
+                        <a href="">
+                            <li><i class="fas fa-plus"></i>Pediatrics</li>
+                        </a>
+                        <a href="">
+                            <li><i class="fas fa-plus"></i>Dermatology</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer__lasted-news">
+                    <div class="footer-title">
+                        <h2>Lasted News
+                            <span class="line">
+                                <span class="dot"></span>
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="footer-posts">
+                        <div class="footer-post">
+                            <img src="./assets/images/post-thumb-1.jpg" alt="">
+                            <div class="footer-post__description">
+                                <a href="#">
+                                    <p class="footer-post-title">Integrative Medicine
+                                        & Cancer Treatment.</p>
+                                </a>
+                                <span class="footer-post-date">July 11, 2021</span>
+                            </div>
+                        </div>
+                        <div class="footer-post">
+                            <img src="./assets/images/post-thumb-1.jpg" alt="">
+                            <div class="footer-post__description">
+                                <a href="#">
+                                    <p class="footer-post-title">Integrative Medicine
+                                        & Cancer Treatment.</p>
+                                </a>
+                                <span class="footer-post-date">July 11, 2021</span>
+                            </div>
+                        </div>
+                        <div class="footer-post">
+                            <img src="./assets/images/post-thumb-1.jpg" alt="">
+                            <div class="footer-post__description">
+                                <a href="#">
+                                    <p class="footer-post-title">Integrative Medicine
+                                        & Cancer Treatment.</p>
+                                </a>
+                                <span class="footer-post-date">July 11, 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__contact-us">
+                    <div class="footer-title">
+                        <h2>Contact Us
+                            <span class="line">
+                                <span class="dot"></span>
+                            </span>
+                        </h2>
+                    </div>
+    
+                    <div class="contact-box">
+                        <img src="./assets/icons/placeholder.png" alt="">
+                        <div class="contact-box__description">
+                            <p class="contact-title">
+                                2130 Fulton Street San Diego
+                            </p>
+                            <span class="contact-sub-title">
+                                CA 94117-1080 USA
+                            </span>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <img src="./assets/icons/call (1).png" alt="">
+                        <div class="contact-box__description">
+                            <p class="contact-title">
+                                Mon to Fri : 08:30 - 18:00
+                            </p>
+                            <span class="contact-sub-title">
+                                <a href="tel:+898 68679 575">+898 68679 575</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <img src="./assets/icons/email (1).png" alt="">
+                        <div class="contact-box__description">
+                            <p class="contact-title">
+                                Do you have a Question?
+                            </p>
+                            <span class="contact-sub-title">
+                                <a href="mailto:info@gmail.com">
+                                    info@gmail.com
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <img src="./assets/icons/back-in-time (1).png" alt="">
+                        <div class="contact-box__description">
+                            <p class="contact-title">
+                                Mon - Sat 8.00 - 18.00
+                            </p>
+                            <span class="contact-sub-title">
+                                Sunday CLOSED
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./assets/flickity/flickity.min.js"></script>

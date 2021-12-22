@@ -1,0 +1,67 @@
+.profile{
+    padding: 8rem;
+    display: flex;
+    &__wrapper{
+        width: 60rem;
+    }
+    &__title{
+        padding: 28px 0 35px;
+        text-align: center;
+        overflow: hidden;
+        display: block;
+        clear: both;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-color: #e0e0e0;
+        & h2{
+            font-size: 28px;
+            line-height: 34px;
+            color:$blue-v2;
+            text-align: center;
+        }
+    }
+    &__img{
+        padding: 40px 0 0;
+        text-align: center;
+        & img{
+            width: 22rem;
+            height: 22rem;
+            object-fit: contain;
+        }
+    }
+    &__details{
+        margin-top: 3rem;
+        border-color: rgb(224, 224, 224);
+        border-top-color: #3065b5;
+        padding: 22px 30px 34px;
+        margin-bottom: 25px;
+        border-width: 1px;
+        border-style: solid;
+        & h3{
+            color: #222222;
+            font-size: 20px;
+            line-height: 26px;
+            margin: 0 0 26px;
+        }
+        & ul{
+            & li{
+                border-color: #e0e0e0;
+                padding: 6px 0;
+                border-bottom-style: solid;
+                color: #787878;
+                font-size: 13px;
+                display: flex;
+                justify-content: space-between;
+                &:not(:last-child){
+                    border-bottom-width: 1px;
+                }
+            }
+        }
+    }
+    &__main{
+        background-image: url('../images/team-title-img.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        height: 26rem;
+    }
+}

@@ -49,20 +49,20 @@ const hoverSign = function (item){
         HoverSign.style.left = "280px";
         HoverSign.style.width = "37px";
       break;
-    case "Shop":
-        HoverSign.style.left = "350px";
+    case "FAQ":
+        HoverSign.style.left = "345px";
         HoverSign.style.width = "35px";
       break;
-    case "My Account":
-        HoverSign.style.left = "415px";
-        HoverSign.style.width = "84px";
-      break;
+    // case "My Account":
+    //     HoverSign.style.left = "410px";
+    //     HoverSign.style.width = "84px";
+    //   break;
     case "About us":
-        HoverSign.style.left = "530px";
+        HoverSign.style.left = "410px";
         HoverSign.style.width = "63px";
       break;
     case "Contact us":
-        HoverSign.style.left = "625px";
+        HoverSign.style.left = "500px";
         HoverSign.style.width = "77px";
         break;  
     default:
@@ -85,7 +85,6 @@ function myFunction() {
     navbar.classList.remove("fixed");
   }
 }
-
 
 //timetable
 const timetableDatas =  document.querySelectorAll(".timetable__data");
@@ -111,11 +110,11 @@ timetableTarget?.addEventListener("click",function(e){
   e.stopPropagation();
 })
 
-document.addEventListener("click",function(e){
-  e.preventDefault();
-  e.stopPropagation();
-  timetableDropdown?.classList.add("d-none");
-})
+// document.addEventListener("click",function(e){
+//   e.preventDefault();
+//   e.stopPropagation();
+//   timetableDropdown?.classList.add("d-none");
+// })
 
 timetableLink?.forEach(function(item){
   item.addEventListener("click",function(e){
@@ -150,6 +149,48 @@ appointmentModalOpenBtn?.addEventListener("click",function(e){
   appointmentModal.style.opacity="1";
   appointmentModal.style.visibility="visible";
 })
+
+
+//lang
+const lang = document.querySelector(".header__lang");
+const langDropdown =document.querySelector(".header__lang__list");
+lang.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    langDropdown.classList.toggle("d-none");
+    if(langDropdown.getAttribute("class").includes("d-none")){
+        lang.style.backgroundColor="transparent"
+    }
+    else{
+        lang.style.backgroundColor="#fff";
+    }
+});
+langDropdown.addEventListener("click",(e)=>{
+    e.stopPropagation();
+});
+
+
+//search-modal
+const searchModal = document.querySelector(".search__wrapper");
+const searchCloseBtn = document.querySelector(".search__form-close");
+const searchModalOpenBtn = document.querySelectorAll(".header__search-1");
+
+
+searchCloseBtn?.addEventListener("click",function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  searchModal.style.opacity="0";
+  searchModal.style.visibility="hidden";
+})
+
+searchModalOpenBtn.forEach(function(item){
+  item?.addEventListener("click",function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    searchModal.style.opacity="1";
+    searchModal.style.visibility="visible";
+  })
+})
+
 
 
 //blog-filter
@@ -245,4 +286,122 @@ profileDropdown?.addEventListener("mouseout",function(e){
   infoDropdown.style.width ="0";
   infoDropdown.style.paddingRight ="0%";
   profileDropdown.classList.add("visibility");
+})
+
+
+//form
+const inputs = document.querySelectorAll(".form__input");
+
+inputs.forEach((input)=>{
+    const label = input.nextElementSibling;
+    const warning = label.nextElementSibling;
+    const formIcon = input.previousElementSibling;
+    
+        formIcon?.addEventListener("click",()=>{
+            if(input.getAttribute("type")==="text"){
+                input.setAttribute("type","password");
+            }
+            else{
+                input.setAttribute("type","text");
+            }
+        })
+        input.addEventListener("focusin",(e)=>{
+            input.style.paddingBottom = "0";
+            label.style.left="17px";
+            label.style.top="4px";
+            label.style.fontSize="14px";
+            label.style.color="rgba(white, .2)";
+        })
+        input.addEventListener("focusout",(e)=>{
+            input.style.paddingBottom = "0";
+                label.style.left="17px";
+                label.style.top="16px";
+                label.style.fontSize="16px";
+                label.style.color="rgba(white, .3)";
+        })
+
+    input.addEventListener("input",(event)=>{
+        input.addEventListener("focusout",(e)=>{
+            if(event.target.value){
+                input.style.paddingBottom = "0";
+                label.style.left="17px";
+                label.style.top="4px";
+                label.style.fontSize="14px";
+                label.style.color="rgba(white, .2)";
+                console.log(warning)
+                warning?.classList.add("d-none");
+                
+                
+            }
+            else{
+                input.style.paddingBottom = "0";
+                label.style.left="17px";
+                label.style.top="16px";
+                label.style.fontSize="16px";
+                label.style.color="rgba(white, .3)";
+                warning?.classList.remove("d-none");
+            }
+            
+        });
+
+        
+    })
+});
+
+const profileBtn = document.querySelectorAll(".profile-btn");
+
+profileBtn.forEach((btn)=>{
+    btn.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        e.preventDefault();
+        const target = document.querySelector(`[data-target=${btn.getAttribute("data-value")}]`);
+        profileBtn.forEach((active)=>{
+          const target = document.querySelector(`[data-target=${active.getAttribute("data-value")}]`);
+          target.style.display = "none";
+          active.style.backgroundColor = "transparent";
+          active.style.color = "#3e454f";
+          active.querySelector("i").style.color ="#3e454f";
+        })
+        console.log(target);
+        target.style.display = "block";
+        btn.style.backgroundColor = "#3e454f";
+        btn.style.color = "#fff";
+        btn.querySelector("i").style.color ="#fff";
+    })
+})
+
+
+//hamburger-menu
+const menuBtn = document.querySelector(".header__user-side-icon--mobile");
+const menu = document.querySelector(".menu-side");
+const menuClose = document.querySelector(".menu-side__close-icon");
+const mediaQueryXs = window.matchMedia('(max-width: 576px)')
+const mediaQueryMd = window.matchMedia('(min-width: 992px)')
+
+menuBtn.addEventListener("click",(e)=>{
+    e.stopPropagation();
+    menu.style.left="0%";
+})
+menuClose.addEventListener("click",()=>{
+    menu.style.left="-100%";
+})
+menu.addEventListener("click",(e)=>{
+    e.stopPropagation();
+})
+document.body.addEventListener("click",()=>{
+    menu.style.left="-100%";
+})
+
+mediaQueryXs.addEventListener( "change", (e) => {
+    if (e.matches) {
+        menu.style.width="100vw";
+  } else {
+        menu.style.width="70%"
+  }
+})
+
+mediaQueryMd.addEventListener( "change", (e) => {
+    if (e.matches) {
+        menuClose.click();
+    } 
 })

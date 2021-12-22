@@ -21,6 +21,33 @@
       }
       
     }
+    &--menu{
+      min-width: auto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+        padding: 15px 11px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        border: 1px solid rgba(255,255,255,0.5);
+        &:hover{
+            background-color: #3B4046;
+            color: #C9FFC7;
+            border: 1px solid transparent;
+        }
+    }
+    &--blue{
+      font-size: 1.3rem !important;
+      white-space: nowrap;
+      &::after{
+        background-color: $blue-baby !important;
+      }
+      &::before{
+        background-color: darken($blue-baby, 15%) !important;
+      }
+      
+    }
     &--bigger{
         font-size: 1.5rem;
         padding: 1.2rem 2rem;
