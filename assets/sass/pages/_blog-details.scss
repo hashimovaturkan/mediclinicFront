@@ -103,9 +103,12 @@
                 display: inline-block;
                 vertical-align: middle;
                 color: #333;
+                font-family: FontAwesome !important;
                 transition: color .2s ease-out;
                 & i{
                     font-size: 1.6rem;
+                    color: #333 !important;
+                    font-family: FontAwesome !important;
                 }
                 &:hover{
                     color:$blue-v3;
@@ -131,9 +134,10 @@
     }
     &__comment-icon{
         font-size: 14px;
-        color: #333;
+        color: #333 !important;
         display: inline-block;
         margin-left: 17px;
+        font-family:  FontAwesome !important;
         color: #4e6dcc;
         & a{
             color: #4e6dcc;
@@ -142,6 +146,9 @@
             & i{
                 font-size: 16px;
             }
+        }
+        & i{
+            color: #333 !important;
         }
         
     }
@@ -644,4 +651,28 @@
             }
         }
     }
+}
+
+
+@media (max-width: 991.98px) { 
+    .blog-details__main-content{
+        padding-right: 0;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .blog-details__main-footer{
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .blog-details__comments-first--sub{
+        margin-left: 3rem;
+    }
+    .blog-details__comments-first-info{
+        padding: 0 0 0 18px;
+    }
+    .blog-details__main-text blockquote {
+        font-size: 1.6rem;
+    }
+
 }

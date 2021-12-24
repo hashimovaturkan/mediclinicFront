@@ -150,11 +150,51 @@ appointmentModalOpenBtn?.addEventListener("click",function(e){
   appointmentModal.style.visibility="visible";
 })
 
+//login
+const loginModal = document.querySelector(".login__wrapper");
+const loginModalCloseBtn = document.querySelector(".login__form-close");
+const loginModalOpenBtn = document.querySelectorAll(".makeLoginModal");
+loginModalCloseBtn?.addEventListener("click",function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  loginModal.style.opacity="0";
+  loginModal.style.visibility="hidden";
+})
+loginModalOpenBtn?.forEach(function(item){
+  item?.addEventListener("click",function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    loginModal.style.opacity="1";
+    loginModal.style.visibility="visible";
+    registerModal.style.opacity="0";
+    registerModal.style.visibility="hidden";
+  })
+})
+
+//register
+const registerModal = document.querySelector(".register__wrapper");
+const registerModalCloseBtn = document.querySelector(".register__form-close");
+const registerModalOpenBtn = document.querySelector(".makeRegisterModal");
+registerModalCloseBtn?.addEventListener("click",function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  registerModal.style.opacity="0";
+  registerModal.style.visibility="hidden";
+})
+registerModalOpenBtn?.addEventListener("click",function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  registerModal.style.opacity="1";
+  registerModal.style.visibility="visible";
+  loginModal.style.opacity="0";
+  loginModal.style.visibility="hidden";
+})
+
 
 //lang
 const lang = document.querySelector(".header__lang");
 const langDropdown =document.querySelector(".header__lang__list");
-lang.addEventListener("click",(e)=>{
+lang?.addEventListener("click",(e)=>{
     e.stopPropagation();
     langDropdown.classList.toggle("d-none");
     if(langDropdown.getAttribute("class").includes("d-none")){
@@ -164,7 +204,7 @@ lang.addEventListener("click",(e)=>{
         lang.style.backgroundColor="#fff";
     }
 });
-langDropdown.addEventListener("click",(e)=>{
+langDropdown?.addEventListener("click",(e)=>{
     e.stopPropagation();
 });
 
@@ -289,6 +329,19 @@ profileDropdown?.addEventListener("mouseout",function(e){
 })
 
 
+//form--password
+const passwordEyes = document.querySelectorAll(".login__eye");
+passwordEyes.forEach(function(item){
+  item?.addEventListener("click",()=>{
+    if(item.previousElementSibling.getAttribute("type")==="text"){
+      item.previousElementSibling.setAttribute("type","password");
+    }
+    else{
+      item.previousElementSibling.setAttribute("type","text");
+    }
+  })
+})
+
 //form
 const inputs = document.querySelectorAll(".form__input");
 
@@ -378,14 +431,14 @@ const menuClose = document.querySelector(".menu-side__close-icon");
 const mediaQueryXs = window.matchMedia('(max-width: 576px)')
 const mediaQueryMd = window.matchMedia('(min-width: 992px)')
 
-menuBtn.addEventListener("click",(e)=>{
+menuBtn?.addEventListener("click",(e)=>{
     e.stopPropagation();
     menu.style.left="0%";
 })
-menuClose.addEventListener("click",()=>{
+menuClose?.addEventListener("click",()=>{
     menu.style.left="-100%";
 })
-menu.addEventListener("click",(e)=>{
+menu?.addEventListener("click",(e)=>{
     e.stopPropagation();
 })
 document.body.addEventListener("click",()=>{
@@ -405,3 +458,62 @@ mediaQueryMd.addEventListener( "change", (e) => {
         menuClose.click();
     } 
 })
+
+
+//contact
+const nameInput = document.getElementById("name");
+const mailInput = document.getElementById("mail");
+const nameError = document.getElementById("name-label");
+const mailError = document.getElementById("mail-label");
+
+const submitButton = document.getElementById("contact-us-button");
+
+submitButton?.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const valueLengthName = nameInput.value.length;
+    const valueLengthMail = mailInput.value.length;
+
+    console.log('maz');
+
+
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if(re.test(mailInput.value.trim())){
+        mailInput.classList.add("success-input");
+        mailError.classList.remove("error");
+    }
+    else if (valueLengthMail == 0) {
+        mailError.innerText = "Email cannot be left blank";
+        mailError.classList.add("error");
+        mailInput.classList.add("error-input");
+    }
+    else{
+        mailError.innerText = "Email is not spelled correctly";
+        mailInput.classList.remove("success");
+        mailInput.classList.add("error");
+    }
+
+
+    if (valueLengthName == 0) {
+        nameError.classList.add("error");
+        nameInput.classList.add("error-input");
+    }
+    else{
+        nameError.classList.remove("error");
+        nameInput.classList.add("success-input");
+    }
+
+    // if (valueLengthMail == 0) {
+    //     mailError.classList.add("error");
+    //     mailInput.classList.add("error-input");
+    // }
+    // else{
+    //     mailError.classList.remove("error");
+    //     mailInput.classList.add("success-input");
+    // }
+})
+
+
+
+

@@ -84,6 +84,58 @@
                 <a href="#" class="appointment-modal__form-close"></a>
             </div>
         </div>
+        <div class="search__wrapper">
+            <div class="search">
+                <div class="search__form-wrapper">
+                    <div class="appointment-modal__title-box">
+                        <h4>Search</h4>
+                    </div>
+                    <form action="" class="appointment-modal__form">
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xl-12 appointment-modal__row">
+                                <div class="search__icon-wrapper">
+                                    <input type="text" class="appointment-modal__input" placeholder="Search word...">
+                                    <a href="#" class="search__icon">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <a href="#" class="search__form-close"></a>
+            </div>
+        </div>
+        <div class="menu-side">
+            <div class="menu-side__head">
+                <a href="./index.html" class="header__top-logo menu-side__title">
+                    <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
+                </a>
+                <i class="icon-close_two_tone menu-side__close-icon" id="closeIcon"></i>
+            </div>
+            <nav class="menu-side__navbar">
+                <ul class="menu-side__list">
+                    <li class="menu-side__list-item"><a href="./about.html" class="menu-side__list-link">Doctors</a></li>
+                    <li class="menu-side__list-item"><a href="./tariffs.html" class="menu-side__list-link">Timetable</a></li>
+                    <li class="menu-side__list-item"><a href="./services.html" class="menu-side__list-link">Departments</a></li>
+                    <li class="menu-side__list-item"><a href="./shops.html" class="menu-side__list-link">Blogs</a></li>
+                    <li class="menu-side__list-item"><a href="./innovations.html" class="menu-side__list-link">FAQ</a></li>
+                    <li class="menu-side__list-item"><a href="./contact.html" class="menu-side__list-link">About us</a></li>
+                    <li class="menu-side__list-item"><a href="./contact.html" class="menu-side__list-link">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="menu-side__footer">
+                <div class="menu-side__lang">
+                    <a href="" class="btn btn--menu mr-10">AZE</a>
+                    <a href="" class="btn btn--menu mr-10">ENG</a>
+                    <a href="" class="btn btn--menu">RUS</a>
+                </div>
+                <a href="" class="btn btn--menu header__search-1">
+                    <i class="icon-phone_two_tone fa fa-search"></i>
+                    <span>Search</span>
+                </a>
+            </div>
+        </div>
         <header class="header">
             <div class="header__top">
                 <div class="custom-container">
@@ -174,9 +226,9 @@
                                     <a href="./tariffs.html" class="menu__list-link">Blogs</a>
                                 </li>
                                 <li class="menu__list-item">
-                                    <a href="./tariffs.html" class="menu__list-link">Shop</a>
+                                    <a href="./tariffs.html" class="menu__list-link">FAQ</a>
                                 </li>
-                                <li class="menu__list-item">
+                                <!-- <li class="menu__list-item">
                                     <a href="./tariffs.html" class="menu__list-link">My Account</a>
                                     <div class="menu__dropdown">
                                         <ul class="menu__dropdown-list">
@@ -184,7 +236,7 @@
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Checkout</a></li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li class="menu__list-item">
                                     <a href="./tariffs.html" class="menu__list-link">About us</a>
                                     <div class="menu__dropdown">
@@ -194,7 +246,6 @@
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Services</a></li>
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Process</a></li>
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Our Clients</a></li>
-                                            <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">FAQ</a></li>
                                             <li class="menu__dropdown-item"><a href="./tariffs.html" class="menu__dropdown-link">Working Hours</a></li>
                                         </ul>
                                     </div>
@@ -240,9 +291,20 @@
                                     </a></li>
                                 </ul>
                             </div>
+                            <a href="./signin.html" class="header__user-account">
+                                <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                                <span class="header__user-account__text">Hesabım</span>
+                            </a>
                             <a href="#" class="btn btn--primary makeAppointmentModal">
                                 Make an Appointment
                             </a>
+                            <div class="header__lang" tabindex="0">
+                                <a class="header__lang__current">AZE</a>
+                                <ul class="header__lang__list d-none">
+                                    <li class="header__lang__list-item"><a class="header__lang__item-link">ENG</a></li>
+                                    <li class="header__lang__list-item"><a class="header__lang__item-link">RUS</a></li>
+                                </ul>
+                            </div>
                             <!-- <a href="#" class="header__user-side-icon">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="header__user-side-circle">
@@ -251,13 +313,31 @@
                                 
                             </a> -->
                             
-                            <a href="#" class="header__user-side-icon">
+                            <a href="#" class="header__user-side-icon header__search header__search-1">
                                 <i class="fa fa-search"></i>
                             </a>
                             <!-- <a href="#" class="header__user-side-icon">
                                 <i class="fa fa-bars"></i>
                             </a> -->
                         </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="header__mobile">
+            <div class="header__top">
+                <div class="custom-container">
+                    <div class="header__mobile__wrapper">
+                        <a href="#" class="header__user-side-icon header__user-side-icon--mobile">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <a href="./index.html" class="header__top-logo--center">
+                            <img src="./assets/images/logo-dark.png" width="173" height="36" alt="logo">
+                        </a>
+                        <a href="./signin.html" class="header__user-account">
+                            <i class="icon-user_two_tone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                            
+                        </a>
                     </div>
                 </div>
             </div>

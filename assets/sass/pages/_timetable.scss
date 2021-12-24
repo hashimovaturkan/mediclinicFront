@@ -125,3 +125,44 @@
         outline:none;
     }
 }
+
+.timetable-mobile{
+    display: none;
+    & h3{
+        color: #333!important;
+        font-size: 15px!important;
+        text-align: left;
+        margin-bottom: 20px
+    }
+    & ul{
+        margin-bottom: 3rem;
+    }
+    & li{
+        border-color: #e5e5e5;
+        padding: 15px 0!important;
+        border-bottom: 1px solid #e0e0e0;
+        background-position: left center;
+        background-repeat: no-repeat;
+        line-height: 120%;
+        display: flex;
+        justify-content: space-between;
+        & span:first-child{
+            color: #4e6dcc!important;
+            font-size: 14px!important;
+        }
+        & span:not(:first-child){
+            color: #34495e!important;
+            font-size: 14px!important;
+        }
+    }
+}
+
+
+@media (max-width: 991.98px) { 
+    .timetable-mobile{
+        display: block;
+    }
+    .timetable{
+        display: none;
+    }
+  }

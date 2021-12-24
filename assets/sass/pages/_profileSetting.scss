@@ -12,3 +12,26 @@
         border-radius: 8px;
     }
 }
+
+@media (max-width: 991.98px) { 
+    .aside-form {
+        border: none;
+    }
+    .form{
+        margin-top: 4rem;
+    }
+  }
+  
+@media (max-width: 767.98px) { 
+    .form{
+        padding: 0;
+    }
+ 
+  }
+  
+  @media (max-width: 575.98px) {
+    .setting .heading__title{
+        font-size: 3rem;
+    }
+  
+  }

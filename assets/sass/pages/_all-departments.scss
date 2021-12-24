@@ -16,3 +16,49 @@
         padding: 8rem 0;
     }
 }
+
+
+
+  @media (max-width: 991.98px) { 
+    .all-departments .carousel__cell{
+        width: 40%;
+    }
+  }
+  
+  @media (max-width: 767.98px) { 
+    .all-departments .carousel__cell{
+        width: 46%;
+    }
+    .main__title{
+        font-size: 4rem;
+    }
+ 
+  }
+  
+  
+  @media (max-width: 575.98px) {
+    .all-departments .carousel__cell{
+        width: 54%;
+    }
+  
+  }
+  @media (max-width: 480px) {
+    .all-departments .carousel__cell{
+        width: 63%;
+    }
+}
+@media (max-width: 420px) {
+    .all-departments .carousel__cell{
+        width: 73%;
+    }
+    .main__title{
+        font-size: 3.5rem;
+    }
+
+}
+@media (max-width: 380px) {
+    .all-departments .carousel__cell{
+        width: 84%;
+    }
+
+}
